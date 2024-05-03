@@ -1,0 +1,173 @@
+/*Generales*/
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'M PLUS Rounded 1c';
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: rgb(0, 2, 49);
+    /*height: 295vh;*/
+    padding:  0 90px;
+    max-width:max-content;
+    margin: auto;
+    color: #ffffff;
+}
+.sombra{
+    filter:drop-shadow(0em 30px 20px #9bd2f4);
+}
+.boton{
+    text-align: center;
+    background: none;
+    display: inline-block;
+    padding: 4px 40px;
+    background-color: #0956fd;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #00aaff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.boton:hover{
+    background-color: #00aaff;
+    font-size: 18px;
+}
+.centrar{
+    text-align: center;
+}
+
+
+/*Seccion de inicio*/
+.inicio{
+    background: linear-gradient(to right, rgb(0, 2, 49), rgb(2, 2, 116), rgb(0, 15, 175), rgb(2, 2, 116), rgb(0,2,49));
+    padding:  0 80px;
+}
+
+#inicio header nav a{
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+}
+#inicio header nav a:hover{
+    border-bottom: 2px solid #00aaff;
+    font-size: 18px;
+}
+.cuadrado-img{
+    max-width: 400px;
+    margin:auto;
+}
+.cuadrado-img img{
+    width: 100%;
+}
+.circulo-img{
+    max-width: 400px;
+    margin:auto;
+}
+.circulo-img img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+/*Clases generales*/
+.inicio header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    align-items: center;
+}
+.inicio .logo{
+    display: flex;
+    align-items:center;
+    color: #00aaff;
+    font-size: 25px;
+}
+.inicio .logo i{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.inicio .fila{
+    display: flex;
+    margin-top: 50px;
+    padding-bottom: 100px;
+}
+.inicio .fila .columna{
+    width: 50%;
+}
+.inicio .fila .columna h2{
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+.inicio .fila .columna p{
+    margin-bottom: 20px;
+}
+
+/*Sobre mi*/
+.sobremi{
+    background: linear-gradient(to right, rgb(28, 43, 204),rgb(0, 15, 175), rgb(28, 43, 204));
+    padding:  0 80px;
+}
+.sobremi .fila{
+    display: flex;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+.sobremi .fila .columna{
+    width: 50%;
+}
+
+/*Habilidades*/
+.habilidades{
+    background: linear-gradient(to right, rgb(0, 2, 49), rgb(2, 2, 116), rgb(0, 15, 175), rgb(2, 2, 116), rgb(0,2,49));
+    padding:  0 80px;
+}
+.habilidades .fila {
+    text-align: center; 
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.habilidades .fila img {
+    max-width: 90px;
+    height: auto;
+    margin-bottom: 20px;
+    margin: 0 20px;
+}
+
+/*Proyectos*/
+.proyectos{
+    background: linear-gradient(to right, rgb(0, 15, 175),rgb(1, 88, 219), rgb(0, 15, 175));
+    padding:  0 80px;
+}
+
+/*Final de la pagina*/
+.final{
+    background: linear-gradient(to right, rgb(0, 2, 49), rgb(2, 2, 116), rgb(0, 15, 175), rgb(2, 2, 116), rgb(0,2,49));
+    padding:  0 80px;
+}
+#Final .FinalPagina{
+    text-align: center;
+}
+#Final .redes{
+    text-align: center;
+}
+#Final .redes a{
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 30px;
+}
+#Final .redes a:hover{
+    color: #00aaff;
+    font-size: 35px;
+}
