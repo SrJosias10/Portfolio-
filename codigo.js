@@ -1,3 +1,4 @@
+//Aparicion de habilidades
 function animarHabilidades() {
     const habilidades = document.querySelectorAll("#habilidades-contenedor > *");
 
@@ -18,3 +19,17 @@ function animarHabilidades() {
 }
 document.addEventListener("DOMContentLoaded", animarHabilidades);
 window.addEventListener("scroll", animarHabilidades);
+
+//Aparicion de imagenes
+document.addEventListener('scroll', function() {
+    var proyectos = document.querySelectorAll('.aparicionImagen');
+    for (var i = 0; i < proyectos.length; i++) {
+        if (proyectoIsVisible(proyectos[i])) {
+            proyectos[i].classList.add('visible');
+        }
+    }
+});
+function proyectoIsVisible(el) {
+    var rect = el.getBoundingClientRect();
+    return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+}
