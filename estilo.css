@@ -12,19 +12,19 @@ html{
 body{
     background: rgb(0, 2, 49);
     /*height: 295vh;*/
-    padding:  0 90px;
+    padding:  0 30px;
     max-width:max-content;
     margin: auto;
     color: #ffffff;
 }
 .sombra{
-    filter:drop-shadow(0em 30px 20px #9bd2f4);
+    filter:drop-shadow(0em 30px 20px #34c7f0);
 }
 .boton{
     text-align: center;
     background: none;
     display: inline-block;
-    padding: 4px 40px;
+    padding: 10px 20px;
     background-color: #0956fd;
     color: #fff;
     text-decoration: none;
@@ -41,7 +41,7 @@ body{
     text-align: center;
 }
 .tamaniotitulo{
-    font-size: 30px;
+    font-size: 24px;
     text-align: center;
 }
 
@@ -49,7 +49,7 @@ body{
 /*Seccion de inicio*/
 .inicio{
     background: linear-gradient(to right, rgb(0, 2, 49), rgb(2, 2, 116), rgb(0, 15, 175), rgb(2, 2, 116), rgb(0,2,49));
-    padding:  0 80px;
+    padding: 20px;
 }
 
 #inicio header nav a{
@@ -87,7 +87,6 @@ body{
     width: 100%;
     border-radius: 50%;
 }
-/*Inicio*/
 .inicio header{
     display: flex;
     justify-content: space-between;
@@ -98,20 +97,22 @@ body{
     display: flex;
     align-items:center;
     color: #00aaff;
-    font-size: 25px;
+    font-size: 20px;
 }
 .inicio .logo i{
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .inicio .fila{
     display: flex;
-    margin-top: 50px;
+    flex-wrap: wrap;
+    margin-top: 20px;
     padding-bottom: 100px;
 }
 .inicio .fila .columna{
-    width: 50%;
+    width: 100%;
+    padding: 0 10px;
 }
 .inicio .fila .columna h2{
     margin-bottom: 45px;
@@ -124,7 +125,7 @@ body{
 /*Sobre mi*/
 .sobremi{
     background: linear-gradient(to right, rgb(28, 43, 204),rgb(0, 15, 175), rgb(28, 43, 204));
-    padding:  0 80px;
+    padding:  0 20px;
 }
 .sobremi .fila{
     display: flex;
@@ -142,7 +143,7 @@ body{
 /*Habilidades*/
 .habilidades{
     background: linear-gradient(to right, rgb(0, 2, 49), rgb(2, 2, 116), rgb(0, 15, 175), rgb(2, 2, 116), rgb(0,2,49));
-    padding:  0 80px;
+    padding:  0 20px;
 }
 .habilidades .fila {
     text-align: center; 
@@ -160,7 +161,7 @@ body{
 /*Proyectos*/
 .proyectos{
     background: linear-gradient(to right, rgb(0, 15, 175),rgb(1, 88, 219), rgb(0, 15, 175));
-    padding:  0 80px;
+    padding:  0 20px;
 }
 .proyectos .fila{
     display: flex;
@@ -178,7 +179,7 @@ body{
 /*Final de la pagina*/
 .final{
     background: linear-gradient(to right, rgb(0, 2, 49), rgb(2, 2, 116), rgb(0, 15, 175), rgb(2, 2, 116), rgb(0,2,49));
-    padding:  0 80px;
+    padding:  0 20px;
 }
 #Final .FinalPagina{
     text-align: center;
