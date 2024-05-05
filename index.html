@@ -8,6 +8,7 @@
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilo.css"/>
+    <script src="codigo.js"></script>
     <title>Portfolio 💻</title>
 </head>
 <body>
@@ -15,34 +16,32 @@
     <section id="inicio" class="inicio">
             <header>
                 <div class="logo">
-                    <i class="fa-solid fa-house"></i>
-                    <h1 title="Inicio">Inicio</h1>
+                    <i class="fa-solid fa-user"></i>
+                    <h1 title="Inicio">Josias Omar</h1>
                 </div>
                 <nav id="opciones">
-                    <a href="#inicio"; title="Ir al inicio">INICIO</a>
+                    <a href="#inicio" title="Ir al inicio">INICIO</a>
                     |
-                    <a href="#sobremi"; title="Aca podras saber mas sobre mi">SOBRE MI</a>       
+                    <a href="#sobremi" title="Aca podras saber mas sobre mi">SOBRE MI</a>       
                     |         
-                    <a href="#habilidades"; title="Mis habilidades adquiridas">HABILIDADES</a>
+                    <a href="#habilidades" title="Mis habilidades adquiridas">HABILIDADES</a>
                     |
-                    <a href="#proyectos"; title="Mis proyectos realizados para el continuo aprendizaje">PROYECTOS</a>
+                    <a href="#proyectos" title="Mis proyectos realizados para el continuo aprendizaje">PROYECTOS</a>
                 </nav>
             </header>
             <div class="fila">
                 <div class="columna">
-                    <h2>¡Bienvenidos!</h2>
-                    <p>¡Hola a todos! <br/><br/>Me llamo Josias Omar Olave Florez y estoy encantado de darte la bienvenida a mi portafolio. 
+                    <h2>¡Hola a todos!</h2>
+                    <p>Me llamo Josias y estoy encantado de darte la bienvenida a mi portafolio. 
                         Aca encontrarás una recopilación de información sobre mí, donde podrás conocer mi experiencia, habilidades y 
-                        proyectos en los que he trabajado. <br/> Este espacio está diseñado para que puedas explorar mi trayectoria profesional y 
-                        educativa, así como mis áreas de especialización y los proyectos que he desarrollado. Desde diseño hasta desarrollo, y 
-                        más allá, este portafolio refleja mi pasión y dedicación por la programación.<br/> 
+                        proyectos en los que he trabajado. <br/>
                         No dudes en contactarme si tienes alguna pregunta o comentario, atendere a tu mensaje lo antes posible.<br/>
                         <br/><br/>
                         ¡Gracias por visitar mi portafolio!
                     </p>
                 </div>
                 <div class="columna">
-                    <div class="cuadrado-img">
+                    <div class="cuadradoXL-img">
                         <img src="carpeta/compu.png" alt="Foto de presentacion" title="Imagen de presentacion" class="sombra">
                     </div>
                 </div>
@@ -55,25 +54,21 @@
     <!--Seccion sobre mi-->
     <section id="sobremi" class="sobremi">
         <br/><br/>
-        <h2 class="centrar">Sobre mí</h2>
+        <h1 class="tamaniotitulo">Sobre mí</h1>
         <div class="fila">
             <div class="columna">
-                <p>Mi nombre es Josias Omar Olave Florez, nací en Buenos Aires, Argentina, tengo 25 años y vivo en la ciudad de Buenos Aires. 
-                    Actualmente, estoy cursando mi último año de la Tecnicatura Universitaria en Programación en la Universidad Tecnológica Nacional (UTN) 
-                    Facultad Regional General Pacheco (FRGP), donde he adquirido una sólida base de conocimientos en el campo de la tecnología.
-                    Estoy emocionado por embarcarme en una nueva etapa profesional y estoy buscando oportunidades en el mundo IT. 
-                    <br/>Mi objetivo es encontrar un trabajo en el que pueda aplicar mis habilidades y conocimientos, mientras sigo aprendiendo y creciendo academicamente como laboralmente.
-                    Soy una persona dedicada, comprometida y siempre dispuesta a enfrentar nuevos desafíos. Me encanta trabajar en equipo, 
-                    colaborar con otros profesionales y aprender de sus experiencias. <br/>Estoy convencido de que el aprendizaje continuo es fundamental para el éxito en 
-                    esta industria y estoy ansioso por seguir desarrollándome tanto profesional como personalmente.
-                    En mi portafolio, encontrarás ejemplos de proyectos en los que he trabajado, así como información sobre mis habilidades, experiencia y logros.
+                <p>Mi nombre es Josias Omar Olave Florez, tengo 25 años, nací y vivo en la ciudad de Buenos Aires, Argentina. 
+                    Actualmente, estoy cursando mi último año de la Tecnicatura Universitaria en Programación en la UTN FRGP
+                    <br/>Mi objetivo es poder seguir desarrollandome tanto academicamente como laboralmente.
+                    Soy una persona dedicada, comprometida y siempre dispuesta a enfrentar nuevos desafíos.<br/>Estoy convencido de que el aprendizaje continuo es fundamental para el éxito en 
+                    el mundo IT y estoy ansioso por seguir desarrollándome tanto profesional como personalmente.
                     
-                </p><br/><br/>
+                </p>
                <a href="carpeta/Olave.pdf" class="boton" title="Haga click para ver mi CV">Ver curriculum vitae</a> 
             </div>
             <div class="columna">
                 <div class="circulo-img">
-                    <img src="carpeta/inicio.jpeg" alt="Mi foto" class="sombra"/>
+                    <img src="carpeta/inicio.png" alt="Mi foto" class="sombra" title="Imagen personal"/>
                 </div>
             </div>
         </div>
@@ -85,8 +80,8 @@
     <!--Seccion de habilidades-->
     <section id="habilidades" class="habilidades">
         <br/><br/>
-        <h2 class="centrar">Habilidades</h2>
-        <div class="fila">
+        <h1 class="tamaniotitulo">Habilidades</h1>
+        <div class="fila" id="habilidades-contenedor">
             <img src="carpeta/c++.png" alt="Imagen de C++" title="C++" class="sombra">
             <img src="carpeta/csharp.png" alt="Imagen de C#" title="C#" class="sombra">
             <img src="carpeta/.net.png" alt="Imagen de .NET" title=".NET" class="sombra">
@@ -101,8 +96,56 @@
 
     <!--Seccion de proyectos-->
     <section id="proyectos" class="proyectos">
-        <h2>Proyectos</h2>
-        <p>Mis proyectos: </p>
+        <br/><br/>
+        <h1 class="tamaniotitulo">Proyectos</h1><br/><br/>
+        <!--Proyecto Irwin's-->
+            <div class="fila">
+                <div class="columna">
+                    <h2>Irwin's Revenge</h2>
+                    <p>Juego de dados realizado como proyecto evaluativo de la materia Laboratorio en Computación I de la carrera 
+                        Tecnicatura Universitaria en Programacion (UTN FRGP). El juego esta hecho con C++ y sigue un reglamento 
+                        explicado al iniciar el juego.
+                    </p>
+                   <a href="https://github.com/SrJosias10/Irwin-s-Revenge" target="_blank" class="boton" title="Haga click para ver el repositorio subido a GitHub">Ver repositorio</a> 
+                </div>
+                <div class="columna">
+                    <div class="cuadrado-img">
+                        <img src="carpeta/irwins.png" alt="Irwin's Revenge" class="sombra" title="Irwin's Revenge"/>
+                    </div>
+                </div>
+            </div>
+        <!--Proyecto Carlos Duty-->
+            <div class="fila">
+                <div class="columna">
+                    <h2>Carlos Duty Zombies</h2>
+                    <p>Juego Shotter Top Down realizado usando Programación Orientado a Objetos con el lenguaje C++ usando la libreria SFML. 
+                        Presentado como proyecto final para la materia Laboratorio en Computación II
+                    </p>
+                   <a href="https://github.com/SrJosias10/Carlos-Duty-Zombies" target="_blank" class="boton" title="Haga click para ver el repositorio subido a GitHub">Ver repositorio</a>
+                   <a href="https://www.youtube.com/watch?v=GnaV0VEkbTg&t=8s" target="_blank" class="boton" title="Haga click para ver el video subido a youtube">Ver video</a>  
+                </div>
+                <div class="columna">
+                    <div class="cuadrado-img">
+                        <img src="carpeta/cod.png" alt="Carlos Duty Zombies" class="sombra" title="Carlos Duty Zombies"/>
+                    </div>
+                </div>
+            </div>
+        <!--Proyecto Administrador de catalogos-->
+            <div class="fila">
+                <div class="columna">
+                    <h2>Gestor de articulos</h2>
+                    <p>Trabajo practico de consola usando .NET con el Framework ASP.NET con el lenguaje C#, es una aplicación para la gestión 
+                        de artículos de un catálogo de un comercio.
+                    </p>
+                   <a href="https://github.com/SrJosias10/TPWindowsForm" target="_blank" class="boton" title="Haga click para ver el repositorio subido a GitHub">Ver repositorio</a> 
+                </div>
+                <div class="columna">
+                    <div class="cuadrado-img">
+                        <img src="carpeta/net.png" alt="Gestor de articulos" class="sombra" title="Gestor de articulos"/>
+                    </div>
+                </div>
+            </div>
+            
     </section>
 
     <hr/>
