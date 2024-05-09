@@ -279,9 +279,9 @@ body{
     margin-bottom: 20px;
     margin: 0 12px;
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .habilidades .fila img {
-        max-width: 50px;
+        max-width: 45px;
         margin: 0px;
     }
 }
