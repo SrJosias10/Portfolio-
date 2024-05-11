@@ -141,7 +141,7 @@ body{
 @media(max-width: 800px){
     #inicio header nav a{
         border: 1px solid transparent;
-        font-size: 13px;
+        font-size: 12px;
     }
 }
 #inicio header nav a:hover{
@@ -151,7 +151,7 @@ body{
 @media(max-width: 800px){
     #inicio header nav a:hover{
         border-bottom: 2px solid #00aaff;
-        font-size: 15px;
+        font-size: 13px;
     }
 }
 .cuadrado-img{
@@ -281,7 +281,7 @@ body{
 }
 @media (max-width: 800px) {
     .habilidades .fila img {
-        max-width: 45px;
+        max-width: 40px;
         margin: 0px;
     }
 }
