@@ -108,6 +108,7 @@ body{
     border: 2px solid white;
     text-align: center;
     animation: changeColor 10s ease-in-out infinite;
+    
 }
 #minimenu nav a{
     color: #fff;
