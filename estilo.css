@@ -11,6 +11,8 @@ html{
 }
 body{
     background: linear-gradient(to right, rgb(0, 2, 49), rgb(2, 2, 116), rgb(0, 15, 175), rgb(2, 2, 116), rgb(0,2,49));
+    background-image: url('carpeta/fondo1.gif');
+    opacity: 100%;
     text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.559);
     padding:  0 180px;
     max-width:max-content;
@@ -87,13 +89,12 @@ body{
 }
 /*Seccion de menu*/
 #minimenu {
-    background-image: url('carpeta/fondo1.gif');
+    background-image: url('carpeta/fondo.gif');
     justify-content: center;
     border-radius: 15px;
     border: 2px solid white;
     text-align: center;
     animation: changeColor 10s ease-in-out infinite;
-    
 }
 #minimenu nav a{
     color: #fff;
@@ -247,7 +248,7 @@ body{
 /*Habilidades*/
 .habilidades{
     /*background: linear-gradient(to right, rgb(0, 2, 49), rgb(2, 2, 116), rgb(0, 15, 175), rgb(2, 2, 116), rgb(0,2,49));*/
-    background-image: url('carpeta/fondo1.gif');
+    background-image: url('carpeta/fondo.gif');
     padding:  0 20px;
     border-radius: 50px;
     border: 2px solid white;
