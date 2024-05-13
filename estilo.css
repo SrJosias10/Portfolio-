@@ -28,8 +28,8 @@ body{
 }
 @media (max-width: 600px) {
     body {
-        padding: 0 30px;
-        font-size: 13px;
+        padding: 0 20px;
+        font-size: 12px;
     }
 }
 .sombra{
@@ -106,7 +106,7 @@ body{
 @media(max-width: 800px){
     #minimenu nav a{
         border: 1px solid transparent;
-        font-size: 12px;
+        font-size: 10px;
     }
 }
 #minimenu nav a:hover{
@@ -120,7 +120,7 @@ body{
 }
 @media(max-width: 800px){
     #minimenu nav a:hover{
-        font-size: 13px;
+        font-size: 11px;
     }
 }
 
