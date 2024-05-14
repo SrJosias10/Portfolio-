@@ -47,7 +47,7 @@ body{
     background: none;
     display: inline-block;
     padding: 10px 20px;
-    background-color: #0956fd;
+    background-color: #0713ff87;
     color: #fff;
     text-decoration: none;
     border: 2px solid #ffffff;
@@ -56,7 +56,7 @@ body{
     transition: background-color 0.3s;
 }
 .boton:hover{
-    background-color: #00aaff;
+    background-color: #00aaffa9;
     font-size: 18px;
 }
 .centrar{
@@ -87,14 +87,17 @@ body{
 .cambioscolor {
     animation: cambio-color 5s infinite; 
 }
+.fondo-secciones{
+    background: linear-gradient(to right, rgba(0, 2, 49, 0.8), rgba(2, 2, 116, 0.8), rgba(0, 15, 175, 0.8), rgba(2, 2, 116, 0.8), rgba(0,2,49, 0.8));
+    background-size: 200% auto;
+    animation: moveGradient 8s linear infinite;
+    padding:  0 20px;
+    border-radius: 50px;
+    border: 2px solid white;
+}
 /*Seccion de menu*/
 #minimenu {
-    background-image: url('carpeta/fondo.gif');
-    justify-content: center;
-    border-radius: 15px;
-    border: 2px solid white;
     text-align: center;
-    animation: changeColor 10s ease-in-out infinite;
 }
 #minimenu nav a{
     color: #fff;
@@ -112,7 +115,7 @@ body{
 }
 #minimenu nav a:hover{
     border: 1px solid white;
-    background-color: rgb(0, 15, 175);
+    background-color: #0800ff9c;
     font-size: 22px;
 }
 #opciones a {
@@ -126,15 +129,18 @@ body{
 }
 
 /*Seccion de inicio*/
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+  }
 
-.inicio {
-    /*background: linear-gradient(to right, rgb(0, 2, 49), rgb(2, 2, 116), rgb(0, 15, 175), rgb(2, 2, 116), rgb(0,2,49));*/
-    background-image: url('carpeta/fondo.gif');
-    padding:  0 20px;
-    border-radius: 50px;
-    border: 2px solid white;
-    padding:  0 20px;
-}
 .cuadrado-img{
     max-width: 200px;
     margin:auto;
@@ -181,9 +187,10 @@ body{
 }
 @media (max-width: 800px){
     .inicio .fila{
-        margin-top: 10px;
+        margin-top: 20px;
         flex-direction: column;
         align-items: center;
+        margin-bottom: -40px;
     }
     #saludoB{
         text-align: center;
@@ -204,14 +211,6 @@ body{
     margin-bottom: 20px;
 }
 /*Sobre mi*/
-.sobremi{
-    background-image: url('carpeta/fondo.gif');
-    padding:  0 20px;
-    border-radius: 50px;
-    border: 2px solid white;
-    width: 100%;
-    margin-bottom: 2px;
-}
 .sobremi .fila{
     display: flex;
     margin-top: 30px;
@@ -223,6 +222,7 @@ body{
 }
 .sobremi .fila .columna p{
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 @media (max-width: 800px) {
     .sobremi .fila {
@@ -246,14 +246,6 @@ body{
   }
 
 /*Habilidades*/
-.habilidades{
-    /*background: linear-gradient(to right, rgb(0, 2, 49), rgb(2, 2, 116), rgb(0, 15, 175), rgb(2, 2, 116), rgb(0,2,49));*/
-    background-image: url('carpeta/fondo.gif');
-    padding:  0 20px;
-    border-radius: 50px;
-    border: 2px solid white;
-    padding:  0 20px;
-}
 .habilidades .fila {
     text-align: center; 
     margin-top: 50px;
@@ -273,14 +265,6 @@ body{
 }
 
 /*Proyectos*/
-.proyectos{
-    background-image: url('carpeta/fondo.gif');
-    border-radius: 50px;
-    border: 2px solid white;
-    animation: changeColor 10s ease-in-out infinite;
-    padding:  0 20px;
-    margin-bottom: 1px;
-}
 .proyectos .fila{
     display: flex;
     margin-top: 10px;
