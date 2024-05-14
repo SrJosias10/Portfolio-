@@ -143,6 +143,7 @@ body{
 
 .cuadrado-img{
     max-width: 200px;
+    opacity: 20%;
     margin:auto;
 }
 .cuadrado-img img{
@@ -151,12 +152,14 @@ body{
 .cuadradoXL-img{
     max-width: 320px;
     margin:auto;
+    opacity: 70%;
 }
 .cuadradoXL-img img{
     width: 100%;
     border-radius: 20px;
 }
 .circulo-img{
+    opacity: 30%;
     max-width: 300px;
     margin:auto;
 }
