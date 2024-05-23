@@ -10,16 +10,16 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background: linear-gradient(to right, rgb(0, 2, 49), rgb(2, 2, 116), rgb(0, 15, 175), rgb(2, 2, 116), rgb(0,2,49));
-    
     background-image: url('carpeta/fondo1.gif');
+    background-size: 50%;
     opacity: 100%;
     text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.559);
-    padding:  0 180px;
+    padding:  0 100px;
     max-width:max-content;
     margin: auto;
     color: #ffffff;
 }
+
 .suave {
     transition: all 0.5s ease;
 }
@@ -48,7 +48,7 @@ body{
     background: none;
     display: inline-block;
     padding: 10px 20px;
-    background-color: #0713ff87;
+    background-color: #060d84b8;
     color: #fff;
     text-decoration: none;
     border: 2px solid #ffffff;
@@ -89,7 +89,7 @@ body{
     animation: cambio-color 5s infinite; 
 }
 .fondo-secciones{
-    background: linear-gradient(to right, rgba(0, 2, 49, 0.8), rgba(2, 2, 116, 0.8), rgba(0, 15, 175, 0.8), rgba(2, 2, 116, 0.8), rgba(0,2,49, 0.8));
+    background: linear-gradient(to right, rgba(0, 2, 49, 0.9), rgba(2, 2, 116, 0.9), rgba(1, 55, 142, 0.9), rgba(2, 2, 116, 0.9), rgba(0,2,49, 0.9));
     background-size: 200% auto;
     animation: moveGradient 8s linear infinite;
     padding:  0 20px;
@@ -104,14 +104,20 @@ body{
     color: #fff;
     text-decoration: none;
     display: inline-block;
-    padding: 10px 10px;
+    padding: 10px 60px;
     border: 10px solid transparent;
     font-size: 18px;
+}
+@media(max-width: 1200px){
+    #minimenu nav a{
+        padding: 10px 15px;
+    }
 }
 @media(max-width: 800px){
     #minimenu nav a{
         border: 1px solid transparent;
         font-size: 10px;
+        padding: 10px 10px;
     }
 }
 #minimenu nav a:hover{
