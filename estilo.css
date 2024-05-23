@@ -11,6 +11,7 @@ html{
 }
 body{
     background: linear-gradient(to right, rgb(0, 2, 49), rgb(2, 2, 116), rgb(0, 15, 175), rgb(2, 2, 116), rgb(0,2,49));
+    
     background-image: url('carpeta/fondo1.gif');
     opacity: 100%;
     text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.559);
