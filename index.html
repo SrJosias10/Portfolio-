@@ -15,15 +15,15 @@
 <body>
     <!-- Seccion de menu de arriba -->
     <br/>
-    <section id="minimenu" class="fondo-secciones">
+    <section id="opciones" class="fondo-secciones">
             <nav id="opciones">
-                <a href="#inicio" class="suave" title="Ir al inicio">INICIO</a>
-                |
-                <a href="#sobremi" class="suave" title="Aca podras saber mas sobre mi">SOBRE MI</a>       
-                |         
-                <a href="#habilidades" class="suave" title="Mis habilidades adquiridas">HABILIDADES</a>
-                |
-                <a href="#proyectos" class="suave" title="Mis proyectos realizados para el continuo aprendizaje">PROYECTOS</a>
+                <a href="#inicio" class="linksmenu" title="Ir al inicio">INICIO</a>
+                
+                <a href="#sobremi" class="linksmenu" title="Aca podras saber mas sobre mi">SOBRE MI</a>       
+                        
+                <a href="#habilidades" class="linksmenu" title="Mis habilidades adquiridas">HABILIDADES</a>
+                
+                <a href="#proyectos" class="linksmenu" title="Mis proyectos realizados para el continuo aprendizaje">PROYECTOS</a>
             </nav>
     </section>
     <br/><br/><br/>
@@ -31,7 +31,7 @@
     <section id="inicio" class="inicio aparecer fondo-secciones">
             <div class="fila">
                 <div class="columna">
-                    <h2 id="saludoB" class="cambioscolor">Bienvenidos</h2>
+                    <h2 style="color:aqua">Josias Omar Olave</h2>
                     <p>Me llamo Josias, acá encontrarás una recopilación de información donde podrás conocer sobre mí, mi experiencia, habilidades y 
                         proyectos en los que he trabajado. <br/>
                         No dudes en contactarme si tenes alguna pregunta o comentario, atenderé a tu mensaje lo antes posible.<br/>
@@ -41,36 +41,30 @@
                 </div>
                 <div class="columna">
                     <div class="cuadradoXL-img">
-                        <img src="carpeta/inicio2.gif" alt="Foto de presentacion" title="Imagen de presentacion" class="sombra">
+                        <img src="carpeta/inicio2.png" alt="Foto de presentacion" title="Imagen de presentacion" class="sombra">
                     </div>
                 </div>
             </div>
     </section>
-    <br/><br/><br/>
+    <br/><hr/><br/>
     <!--Seccion sobre mi-->
     <section id="sobremi" class="sobremi fondo-secciones">
         <br/><br/>
         <h1 class="tamaniotitulo">Sobre mí</h1>
         <div class="fila">
-            <div class="columna">
-                <p>Mi nombre es Josias Omar Olave Florez, tengo 25 años, nací y vivo en la ciudad de Buenos Aires, Argentina. 
-                    Actualmente, estoy cursando mi último año de la Tecnicatura Universitaria en Programación en la UTN FRGP.
-                    <br/>Mi objetivo es poder seguir desarrollandome tanto academicamente como laboralmente.
-                    Soy una persona dedicada, comprometida y siempre dispuesta a enfrentar nuevos desafíos.<br/>Estoy convencido de que el aprendizaje continuo es fundamental para el éxito en 
-                    el mundo IT y estoy ansioso por seguir desarrollándome tanto profesional como personalmente.
+                <p>Mi nombre es Josias Omar Olave Florez, tengo 26 años, nací y vivo en la ciudad de Buenos Aires, Argentina. 
+                    Me gradue como Técnico Universitario en Programación en la Universidad Técnologica Nacional FRGP.
+                    <br/><br/>Mi objetivo es poder seguir desarrollandome tanto academicamente como laboralmente.
+                    Soy una persona dedicada, comprometida y siempre dispuesta a enfrentar nuevos desafíos.<br/><br/>Estoy convencido de que el aprendizaje continuo es fundamental para el éxito y estoy ansioso por seguir desarrollándome tanto profesional como personalmente.
                     
                 </p><br/>
-               <a href="carpeta/Olave.pdf" class="boton" title="Haga click para ver mi CV">Ver curriculum vitae</a>
-               <a href="https://github.com/SrJosias10" class="boton" title="Haga click para ver mi GitHub">Ver GitHub</a> 
-            </div>
-            <div class="columna">
-                <div class="circulo-img aparicionImagen">
-                    <img src="carpeta/Josias.jpeg" alt="Mi foto" class="sombra" title="Imagen personal"/>
-                </div>
-            </div>
         </div>
+        <nav class="centrar">
+                <a href="carpeta/Olave.pdf" class="boton" title="Haga click para ver mi CV">Ver curriculum vitae</a>
+                <a href="https://github.com/SrJosias10" class="boton" title="Haga click para ver mi GitHub">Ver GitHub</a> 
+            </nav>
     </section>
-    <br/><br/><br/>
+    <br/><br/><hr/><br/>
     <!--Seccion de habilidades-->
     <section id="habilidades" class="habilidades fondo-secciones">
         <br/><br/>
@@ -86,11 +80,43 @@
             <img src="carpeta/css3.png" alt="Logo de CSS3" title="CSS3">
         </div>
     </section>
-    <br/><br/><br/>
+    <br/><hr/><br/>
     <!--Seccion de proyectos-->
     <section id="proyectos" class="proyectos fondo-secciones">
         <br/><br/>
         <h1 class="tamaniotitulo">Proyectos</h1><br/><br/>
+        <!--Home Banking-->
+        <h2 id="ttt">Home Banking</h2>
+            <div class="fila">
+                <div class="columna">
+                    <p>Home Banking para un banco ficticio cuya funcionalidad es crear un usuario donde el administrador podra aprobarte para poder 
+                        ingresar y pedir cuentas, prestamos, realizar transferencias. El administrador debe aprobar o rechazar las solicitudes para que 
+                        el cliente pueda realizar sus pedidos. Proyecto final para la materia Laboratorio 4, se uso Java en Eclipse y de base de datos MySql.
+                    </p>
+                   <a href="https://github.com/SrJosias10/Home-Banking-" target="_blank" class="boton" title="Haga click para ver el repositorio subido a GitHub">Ver repositorio</a> 
+                </div>
+                <div class="columna">
+                    <div class="cuadrado-img aparicionImagen">
+                        <img src="carpeta/home.png" alt="Inmobiliaria" title="Home Banking"/>
+                    </div>
+                </div>
+            </div>
+            <!--Inmobiliaria-->
+        <h2 id="ttt">Inmobiliaria</h2>
+        <div class="fila">
+            <div class="columna">
+                <p>Pagina web de una Inmobiliaria donde se muestran diferentes inmuebles donde se podra ver y añadir a favoritos los que
+                    esten registrados, por parte del administrador podra subir nuevos inmuebles para ser publicados. Trabajo final de la materia
+                    Programación 3, se uso C# en el framework .NET, como base de datos se uso SQL Server.
+                </p>
+               <a href="https://github.com/SrJosias10/Inmobiliaria" target="_blank" class="boton" title="Haga click para ver el repositorio subido a GitHub">Ver repositorio</a> 
+            </div>
+            <div class="columna">
+                <div class="cuadrado-img aparicionImagen">
+                    <img src="carpeta/inmobiliaria.png" alt="Inmobiliaria" title="Inmobiliaria"/>
+                </div>
+            </div>
+        </div>
         <!--Proyecto Irwin's-->
         <h2 id="ttt">Irwin's Revenge</h2>
             <div class="fila">
@@ -146,7 +172,7 @@
                 <p>Usando ASP.NET con C# hice una pagina web de compras donde se manipula un carrito de compras y se interactua con 
                     los productos.
                 </p>
-               <a href="https://github.com/SrJosias10/TPCarritoCompras" target="_blank" class="boton" title="Haga click para ver el repositorio subido a GitHub">Ver repositorio</a> 
+               <a href="https://github.com/juan-cruz-escalante/TP_Final" target="_blank" class="boton" title="Haga click para ver el repositorio subido a GitHub">Ver repositorio</a> 
             </div>
             <div class="columna">
                 <div class="cuadrado-img aparicionImagen">
@@ -155,13 +181,13 @@
             </div>
         </div>
             
-    </section><br/>
+    </section><hr/><br/>
 
     <!--Seccion del final-->
     <section id="Final" class="final">
         <div class="centrar">
             <br/>
-            <a href="mailto:josias.olave@alumnos.frgp.utn.edu.ar?subject=&body=" class="boton" title="Haga click para contáctarme">¡Contáctame!</a>
+            <a href="mailto:mromarolave@gmail.com?subject=&body=" class="boton" title="Haga click para contáctarme">¡Contáctame!</a>
 
         </div>
         <div class="redes">
