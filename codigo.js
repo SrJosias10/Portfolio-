@@ -1,188 +1,279 @@
-//Aparicion de habilidades
-function animarHabilidades() {
-    const habilidades = document.querySelectorAll("#habilidades-contenedor > *");
+////////////  Boton links   /////////////
 
-    habilidades.forEach((habilidad, index) => {
-        const retraso = (index + 1) * 100;
-        const habilidadTop = habilidad.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    const menuLinks = document.getElementById('menu-links');
+    menuLinks.classList.toggle('show');
+});
 
-        if (habilidadTop < windowHeight) {
-            habilidad.style.transition = `opacity 0.5s ease ${retraso}ms, transform 0.5s ease ${retraso}ms`;
-            habilidad.style.opacity = "1";
-            habilidad.style.transform = "translateX(0)";
+const menuLinks = document.querySelectorAll('.linksmenu');
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        document.getElementById('menu-links').classList.remove('show');
+    });
+});
+document.addEventListener('click', function(event) {
+    const menu = document.getElementById('menu-links');
+    const toggle = document.getElementById('menu-toggle');
+    
+    if (!menu.contains(event.target) && !toggle.contains(event.target) && menu.classList.contains('show')) {
+        menu.classList.remove('show');
+    }
+});
+  
+////////////  Boton de subir   /////////////
+
+const botonSubir = document.querySelector('.subir-arriba');
+const seccionOpciones = document.querySelector('#opciones');
+
+window.addEventListener('scroll', () => {
+    const seccionBottom = seccionOpciones.getBoundingClientRect().bottom;
+    if (seccionBottom < 0) {
+        botonSubir.style.display = 'flex';
+    } else {
+        botonSubir.style.display = 'none';
+    }
+});
+botonSubir.style.display = 'none';
+
+
+////////////// carrusel ///////////////////
+
+const carruseles = document.querySelectorAll('.carousel');
+
+carruseles.forEach(carrusel => {
+  const imgs = Array.from(carrusel.children);
+
+  imgs.forEach(img => {
+    const clone = img.cloneNode(true);
+    carrusel.appendChild(clone);
+  });
+
+  let desplazamiento = 0;
+
+  function moverCarrusel() {
+    desplazamiento += 1;
+    if (desplazamiento >= carrusel.scrollWidth / 2) {
+      desplazamiento = 0;
+    }
+    carrusel.scrollLeft = desplazamiento;
+    requestAnimationFrame(moverCarrusel);
+  }
+
+  moverCarrusel();
+});
+
+///////////////////////// objeto de fondo con three.js //////////////////////////
+import * as THREE from 'https://cdn.skypack.dev/three@0.129.0/build/three.module.js';
+import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js';
+
+
+const camera = new THREE.PerspectiveCamera(
+    10,
+    window.innerWidth / window.innerHeight,
+    0.1,
+    1000
+);
+camera.position.z = 40;
+const scene = new THREE.Scene();
+
+const renderer = new THREE.WebGLRenderer({ alpha: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.getElementById('container3D').appendChild(renderer.domElement);
+
+const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
+scene.add(ambientLight);
+
+const topLight = new THREE.DirectionalLight(0xffffff, 2.5);
+topLight.position.set(50, 50, 50);
+scene.add(topLight);
+
+let computadora;
+let mixer;
+
+const loader = new GLTFLoader();
+loader.load('/compu.glb',
+    function (gltf) {
+        computadora = gltf.scene;
+
+        const box = new THREE.Box3().setFromObject(computadora);
+        const center = box.getCenter(new THREE.Vector3());
+        computadora.position.sub(center);
+        computadora.scale.set(0.01, 0.01, 0.01);
+
+        scene.add(computadora);
+    },
+    undefined,
+    function (error) {
+        console.error(error);
+    }
+);
+
+let arrPositionModel = [
+    {
+        id: 'presentacion',
+        position: { x: 0, y: -3, z: 0 },
+        rotation: { x: 0, y: 0, z: 0 },
+        scale: { x: 0.010, y: 0.010, z: 0.010 }
+    },
+    {
+        id: "sobremi",
+        position: { x: -4, y: -2, z: 0 },
+        rotation: { x: 0.4, y: 0.6, z: 0.2 },
+        scale: { x: 0.014, y: 0.014, z: 0.014 }
+    },
+    {
+        id: "sobremi2",
+        position: { x: -4, y: 1, z: 0 },
+        rotation: { x: 0.8, y: 0.8, z: 0 },
+        scale: { x: 0.014, y: 0.014, z: 0.014 }
+    },
+    {
+        id: "conocimiento",
+        position: { x: 4, y: 1, z: 0 },
+        rotation: { x: 0.6, y: -0.2, z: 0 },
+        scale: { x: 0.010, y: 0.010, z: 0.010 }
+    },
+    {
+        id: "conocimiento2",
+        position: { x: 4, y: 0, z: 0 },
+        rotation: { x: 0.6, y: -0.3, z: 0 },
+        scale: { x: 0.010, y: 0.010, z: 0.010 }
+    },
+    {
+        id: "proyectos",
+        position: { x: -4, y: 3.8, z: 0 },
+        rotation: { x: 0.6, y: -0.6, z: -0.1},
+        scale: { x: 0.05, y: 0.05, z: 0.05 }
+    },
+    {
+        id: "proyectos1",
+        position: { x: -4, y: 3.6, z: 0 },
+        rotation: { x: 0.6, y: -0.6, z: -0.1},
+        scale: { x: 0.05, y: 0.05, z: 0.05 }
+    },
+    {
+        id: "proyectos2",
+        position: { x: -4, y: 3.4, z: 0 },
+        rotation: { x: 0.6, y: -0.6, z: -0.1},
+        scale: { x: 0.05, y: 0.05, z: 0.05 }
+    },
+    {
+        id: "proyectosUlt",
+        position: { x: -4, y: 3.2, z: 0 },
+        rotation: { x: 0.6, y: -0.6, z: -0.1},
+        scale: { x: 0.05, y: 0.05, z: 0.05 }
+    },
+    {
+        id: "contacto",
+        position: { x: 3, y: 0, z: 0 },
+        rotation: { x: 1, y: -0.4, z: 0.2 },
+        scale: { x: 0.013, y: 0.013, z: 0.013 }
+    },
+    {
+        id: "contacto1",
+        position: { x: 4, y: 1, z: 0 },
+        rotation: { x: 0.8, y: -0.6, z: 0 },
+        scale: { x: 0.013, y: 0.013, z: 0.013 }
+    }
+    
+];
+
+let scrollY = 0;
+let targetScrollY = 0;
+
+window.addEventListener('scroll', () => {
+    targetScrollY = window.scrollY;
+});
+
+function updateModelByScroll(scrollPos) {
+    if (!computadora) return;
+
+    const totalScroll = document.body.scrollHeight - window.innerHeight;
+    const t = scrollPos / totalScroll;
+
+    const numSections = arrPositionModel.length - 1;
+    const sectionFloat = t * numSections;
+
+    const index = Math.floor(sectionFloat);
+    const nextIndex = Math.min(index + 1, arrPositionModel.length - 1);
+    const localT = sectionFloat - index;
+
+    const from = arrPositionModel[index];
+    const to = arrPositionModel[nextIndex];
+
+    if (from && to) {
+        computadora.position.x = THREE.MathUtils.lerp(from.position.x, to.position.x, localT);
+        computadora.position.y = THREE.MathUtils.lerp(from.position.y, to.position.y, localT);
+        computadora.position.z = THREE.MathUtils.lerp(from.position.z, to.position.z, localT);
+
+        computadora.rotation.x = THREE.MathUtils.lerp(from.rotation.x, to.rotation.x, localT);
+        computadora.rotation.y = THREE.MathUtils.lerp(from.rotation.y, to.rotation.y, localT);
+        computadora.rotation.z = THREE.MathUtils.lerp(from.rotation.z, to.rotation.z, localT);
+
+        computadora.scale.x = THREE.MathUtils.lerp(from.scale.x, to.scale.x, localT);
+        computadora.scale.y = THREE.MathUtils.lerp(from.scale.y, to.scale.y, localT);
+        computadora.scale.z = THREE.MathUtils.lerp(from.scale.z, to.scale.z, localT);
+    }
+}
+
+// Render loop
+const reRender3D = () => {
+    requestAnimationFrame(reRender3D);
+    scrollY += (targetScrollY - scrollY) * 0.08;
+    updateModelByScroll(scrollY);
+    renderer.render(scene, camera);
+
+    if (mixer) mixer.update(0.02);
+};
+reRender3D();
+
+// Resize
+window.addEventListener('resize', () => {
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+});
+
+//Boton cambiar modo nocturno-claro
+
+document.addEventListener('DOMContentLoaded', function() {
+    const modoNocturnoClaro = document.getElementById('modo-nocturno-claro');
+    const icono = modoNocturnoClaro.querySelector('i');
+    
+    // Guarda lo seleccionado 
+    const savedTheme = localStorage.getItem('tema');
+    if (savedTheme === 'modo-oscuro') {
+        document.body.classList.add('modo-oscuro');
+        icono.classList.remove('fa-moon');
+        icono.classList.add('fa-sun');
+    }
+    
+    // funcion para cambiar el tema
+    modoNocturnoClaro.addEventListener('click', function() {
+        document.body.classList.toggle('modo-oscuro');
+        
+        if (document.body.classList.contains('modo-oscuro')) {
+            localStorage.setItem('tema', 'modo-oscuro');
+            icono.classList.remove('fa-moon');
+            icono.classList.add('fa-sun');
         } else {
-            habilidad.style.opacity = "0";
-            habilidad.style.transform = "translateX(-50px)";
+            localStorage.setItem('tema', 'modo-claro');
+            icono.classList.remove('fa-sun');
+            icono.classList.add('fa-moon');
         }
     });
-}
-document.addEventListener("DOMContentLoaded", animarHabilidades);
-window.addEventListener("scroll", animarHabilidades);
+});
 
-//Aparicion de imagenes
-document.addEventListener('scroll', function() {
-    var proyectos = document.querySelectorAll('.aparicionImagen');
-    for (var i = 0; i < proyectos.length; i++) {
-        if (proyectoIsVisible(proyectos[i])) {
-            proyectos[i].classList.add('visible');
-        }
+//funcion para  mail
+const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === 'true') {
+        successMessage.style.display = 'block';
+
+        setTimeout(() => {
+            successMessage.style.display = 'none';
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }, 5000);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-});
-function proyectoIsVisible(el) {
-    var rect = el.getBoundingClientRect();
-    return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth);
-}
 
-//fondo
-
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.155.0/build/three.module.js';
-
-// Crear el contenedor del canvas y añadirlo al body
-const container = document.createElement('div');
-container.style.position = 'fixed';
-container.style.top = 0;
-container.style.left = 0;
-container.style.width = '100%';
-container.style.height = '100%';
-container.style.zIndex = '-1'; // atrás de todo
-document.body.appendChild(container);
-
-// Vertex shader
-const vertexShader = `
-  void main() {
-    gl_Position = vec4(position, 1.0);
-  }
-`;
-
-// Fragment shader
-const fragmentShader = `
-  uniform vec2 u_resolution;
-  uniform float u_time;
-  uniform vec2 u_mouse;
-
-  const int octaves = 6;
-  const float seed = 43758.5453123;
-
-  vec2 random2(vec2 st, float seed){
-    st = vec2(dot(st,vec2(127.1,311.7)), dot(st,vec2(269.5,183.3)));
-    return -1.0 + 2.0*fract(sin(st)*seed);
-  }
-
-  float noise(vec2 st, float seed){
-    vec2 i = floor(st);
-    vec2 f = fract(st);
-    vec2 u = f*f*(3.0-2.0*f);
-    return mix(
-      mix(dot(random2(i + vec2(0.0,0.0), seed), f - vec2(0.0,0.0)),
-          dot(random2(i + vec2(1.0,0.0), seed), f - vec2(1.0,0.0)), u.x),
-      mix(dot(random2(i + vec2(0.0,1.0), seed), f - vec2(0.0,1.0)),
-          dot(random2(i + vec2(1.0,1.0), seed), f - vec2(1.0,1.0)), u.x),
-      u.y
-    );
-  }
-
-  float fbm1(in vec2 _st, float seed){
-    float v = 0.0;
-    float a = 0.5;
-    vec2 shift = vec2(100.0);
-    mat2 rot = mat2(cos(0.5), sin(0.5), -sin(0.5), cos(0.5));
-    for (int i = 0; i < octaves; ++i){
-      v += a * noise(_st, seed);
-      _st = rot * _st * 2.0 + shift;
-      a *= 0.4;
-    }
-    return v;
-  }
-
-  float pattern(vec2 uv, float seed, float time, inout vec2 q, inout vec2 r){
-      q = vec2(fbm1(uv, seed), fbm1(uv + vec2(5.2,1.3), seed));
-      r = vec2(fbm1(uv + 4.0*q + vec2(1.7 - time/3.,9.2), seed),
-               fbm1(uv + 4.0*q + vec2(8.3 - time/4.,2.8), seed));
-      vec2 s = vec2(fbm1(uv + 4.0*r + vec2(21.7 - time/2.,90.2), seed),
-                    fbm1(uv + 4.0*r + vec2(80.3 - time/3.,20.8), seed));
-      vec2 t = vec2(fbm1(uv + 4.0*s + vec2(121.7 - time/4.,190.2), seed),
-                    fbm1(uv + 4.0*s + vec2(280.3 - time/5.,120.8), seed));
-      float rtn = fbm1(uv + 4.0*t, seed) * 1.5;
-      return clamp(rtn, 0., .6);
-  }
-
-  void main(){
-    vec2 uv = (gl_FragCoord.xy - 0.5 * u_resolution.xy) / u_resolution.y;
-    uv *= 1. + dot(uv, uv)*.3;
-
-    float speed = 0.002 + (u_mouse.x / u_resolution.x) * 0.01;
-    float time = u_time * speed;
-
-    float angle = time;
-    mat2 rot = mat2(cos(angle), -sin(angle), sin(angle), cos(angle));
-    uv = rot * uv;
-
-    vec2 q = vec2(0.0);
-    vec2 r = vec2(0.0);
-    vec3 color = vec3(pattern(uv, seed, time, q, r));
-
-    color.r *= 0.2;  // rojo bajo
-    color.g *= 1.2;  // verde moderado
-    color.b *= 1.4;  // azul máximo
-    color *= 0.9;
-
-    gl_FragColor = vec4(clamp(color, 0.0, 1.0), 1.0);
-  }
-`;
-
-// Configuración de Three.js
-const scene = new THREE.Scene();
-const camera = new THREE.Camera();
-camera.position.z = 1;
-
-const geometry = new THREE.PlaneGeometry(2, 2);
-
-const uniforms = {
-  u_time: { value: 0.0 },
-  u_resolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
-  u_mouse: { value: new THREE.Vector2(0,0) }
-};
-
-const material = new THREE.ShaderMaterial({
-  uniforms,
-  vertexShader,
-  fragmentShader
-});
-
-const mesh = new THREE.Mesh(geometry, material);
-scene.add(mesh);
-
-const renderer = new THREE.WebGLRenderer();
-renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.innerWidth, window.innerHeight);
-container.appendChild(renderer.domElement);
-
-// Actualizar resolución al redimensionar
-window.addEventListener('resize', () => {
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  uniforms.u_resolution.value.x = renderer.domElement.width;
-  uniforms.u_resolution.value.y = renderer.domElement.height;
-});
-
-// Seguimiento suave del mouse
-const targetMouse = new THREE.Vector2(0, 0);
-
-document.addEventListener('mousemove', e => {
-  targetMouse.x = e.clientX;
-  targetMouse.y = window.innerHeight - e.clientY;
-});
-
-// Animación
-function animate(){
-  requestAnimationFrame(animate);
-
-  // interpolación suave (0.05 = lentitud)
-  uniforms.u_mouse.value.x += (targetMouse.x - uniforms.u_mouse.value.x) * 0.015;
-  uniforms.u_mouse.value.y += (targetMouse.y - uniforms.u_mouse.value.y) * 0.015;
-
-  uniforms.u_time.value += 0.7;
-  renderer.render(scene, camera);
-}
-animate();
 

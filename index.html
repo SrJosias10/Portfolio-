@@ -1,208 +1,265 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="estilo.css"/>
-    <script type="module" src="codigo.js"></script>
-
-    <link rel="icon" href="carpeta/icon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Josias Omar</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
-    <div id="shader-bg"></div>
+    <button id="modo-nocturno-claro" class="modo-nocturno-claro">
+        <i class="fas fa-moon"></i>
+    </button>
+    
+    <a href="#opciones" class="subir-arriba" title="Subir arriba">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
 
-    <!-- Seccion de menu de arriba -->
-    <br/>
     <section id="opciones" class="fondo-secciones">
-            <nav id="opciones">
-                <a href="#inicio" class="linksmenu" title="Ir al inicio">INICIO</a>
-                
-                <a href="#sobremi" class="linksmenu" title="Aca podras saber mas sobre mi">SOBRE MI</a>       
-                        
-                <a href="#habilidades" class="linksmenu" title="Mis habilidades adquiridas">HABILIDADES</a>
-                
-                <a href="#proyectos" class="linksmenu" title="Mis proyectos realizados para el continuo aprendizaje">PROYECTOS</a>
-            </nav>
-    </section>
-    <br/><br/><br/>
-    <!-- Seccion de inicio -->
-    <section id="inicio" class="inicio aparecer fondo-secciones">
-            <div class="fila">
-                <div class="columna">
-                    <h2>Josias Omar Olave</h2>
-                    <p>Me llamo Josias, acá encontrarás una recopilación de información donde podrás conocer sobre mí, mi experiencia, habilidades y 
-                        proyectos en los que he trabajado. <br/>
-                        No dudes en contactarme si tenes alguna pregunta o comentario, atenderé a tu mensaje lo antes posible.<br/>
-                        <br/><br/>
-                        <p>¡Gracias por visitar mi portafolio!</p>
-                    </p>
-                </div>
-                <div class="columna">
-                    <div class="cuadradoXL-img">
-                        <img src="carpeta/inicio3.png" alt="Foto de presentacion" title="Imagen de presentacion" class="sombra">
-                    </div>
-                </div>
+        <nav class="navbar">
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="menu-links" id="menu-links">
+                <a href="#sobremi" class="linksmenu">SOBRE MI</a>       
+                <a href="#conocimiento1" class="linksmenu">CONOCIMIENTOS</a>
+                <a href="#proyectos" class="linksmenu">PROYECTOS</a>
+                <a href="#contacto" class="linksmenu">CONTACTO</a>
             </div>
+        </nav>
     </section>
-    <br/><hr/><br/>
-    <!--Seccion sobre mi-->
-    <section id="sobremi" class="sobremi fondo-secciones">
-        <br/><br/>
-        <h1 class="tamaniotitulo">Sobre mí</h1>
-        <div class="fila">
-                <p>Mi nombre es Josias Omar Olave Florez, tengo 27 años, nací y vivo en la ciudad de Buenos Aires, Argentina. 
-                    Me gradué como Técnico Universitario en Programación en la Universidad Técnologica Nacional FRGP y estoy estudiando Licenciatura en Ciencias de Datos en la Universidad de la Ciudad de Buenos Aires.
-                    <br/><br/>Mi objetivo es poder seguir desarrollandome tanto academicamente como laboralmente.
-                    Soy una persona dedicada, comprometida y siempre dispuesta a enfrentar nuevos desafíos.<br/><br/>Estoy convencido de que el aprendizaje continuo es fundamental para el éxito y estoy ansioso por seguir desarrollándome tanto profesional como personalmente.
-                    
-                </p><br/>
+    <div class="success-message" id="successMessage">
+      <i class="fas fa-check-circle"></i> ¡El mensaje se envió con éxito!
+    </div>
+
+    <div class="section" id="presentacion">
+        <div class="content-fit">
+            <div class="title">Hola, soy Omar</div>
+            <div class="title2">QA & Técnico programador</div>
         </div>
-        <nav class="centrar">
-                <a href="carpeta/Olave.pdf" class="boton" title="Haga click para ver mi CV">Ver curriculum vitae</a>
-                <a href="https://github.com/SrJosias10" class="boton" title="Haga click para ver mi GitHub">Ver GitHub</a> 
-            </nav>
-    </section>
-    <br/><br/><hr/><br/>
-    <!--Seccion de habilidades-->
-    <section id="habilidades" class="habilidades fondo-secciones">
-        <br/><br/>
-        <h1 class="tamaniotitulo">Habilidades</h1>
-        <div class="fila" id="habilidades-contenedor">
-            <img src="carpeta/c++.png" alt="Logo de C++" title="C++">
-            <img src="carpeta/csharp.png" alt="Logo de C#" title="C#">
-            <img src="carpeta/nedi.png" alt="Logo de .NET" title=".NET">
-            <img src="carpeta/java.png" alt="Logo de Java" title="Java">
-            <img src="carpeta/sql.png" alt="Logo de SQL Server" title="SQL Server">
-            <img src="carpeta/html5.png" alt="Logo de HTML5" title="HTML5">
-            <img src="carpeta/javascript.png" alt="Logo de JavaScript" title="JavaScript">
-            <img src="carpeta/css3.png" alt="Logo de CSS3" title="CSS3">
-        </div>
-    </section>
-    <br/><hr/><br/>
-    <!--Seccion de proyectos-->
-    <section id="proyectos" class="proyectos fondo-secciones">
-        <br/><br/>
-        <h1 class="tamaniotitulo">Proyectos</h1><br/><br/>
-        <!--Home Banking-->
-        <h2 id="ttt">Home Banking</h2>
-            <div class="fila">
-                <div class="columna">
-                    <p>Home Banking para un banco ficticio cuya funcionalidad es crear un usuario donde el administrador podra aprobarte para poder 
-                        ingresar y pedir cuentas, prestamos, realizar transferencias. El administrador debe aprobar o rechazar las solicitudes para que 
-                        el cliente pueda realizar sus pedidos. Proyecto final para la materia Laboratorio 4, se uso Java en Eclipse y de base de datos MySql.
-                    </p>
-                   <a href="https://github.com/SrJosias10/Home-Banking-" target="_blank" class="boton" title="Haga click para ver el repositorio subido a GitHub">Ver repositorio</a> 
-                </div>
-                <div class="columna">
-                    <div class="cuadrado-img aparicionImagen">
-                        <img src="carpeta/home.png" alt="Inmobiliaria" title="Home Banking"/>
-                    </div>
-                </div>
-            </div>
-            <!--Inmobiliaria-->
-        <h2 id="ttt">Inmobiliaria</h2>
-        <div class="fila">
-            <div class="columna">
-                <p>Pagina web de una Inmobiliaria donde se muestran diferentes inmuebles donde se podra ver y añadir a favoritos los que
-                    esten registrados, por parte del administrador podra subir nuevos inmuebles para ser publicados. Trabajo final de la materia
-                    Programación 3, se uso C# en el framework .NET, como base de datos se uso SQL Server.
+    </div>
+    
+    <div class="section" id="sobremi">
+        <div class="content-fit">
+          <div class="card-sobremi">
+            <div class="sobre-mi-header">
+              <img src="carpeta/inicio3.png" alt="Josias Omar" class="profile-image">
+              <div class="sobre-mi-info">
+                <h2 class="title">SOBRE MÍ</h2>
+                <p>
+                  Me llamo Josías Omar Olave y tengo 27 años. Soy QA y Técnico Universitario en 
+                  Programación graduado en la UTN. Actualmente estudio la Licenciatura en Ciencias de Datos en 
+                  la Universidad de la Ciudad de Buenos Aires.  
+                  Además, me considero autodidacta en programación y testing.  
+                  Me caracterizo por ser una persona responsable y comprometida con mis tareas y metas.
                 </p>
-               <a href="https://github.com/SrJosias10/Inmobiliaria" target="_blank" class="boton" title="Haga click para ver el repositorio subido a GitHub">Ver repositorio</a> 
+              </div>
             </div>
-            <div class="columna">
-                <div class="cuadrado-img aparicionImagen">
-                    <img src="carpeta/inmobiliaria.png" alt="Inmobiliaria" title="Inmobiliaria"/>
-                </div>
-            </div>
+            <nav class="centrar" id="sobremi2">
+              <a href="carpeta/Olave.pdf" class="boton" title="Ver mi CV"><i class="fa-solid fa-file"></i> Ver CV</a>
+              <a href="https://github.com/SrJosias10" class="boton" title="Ver mi GitHub"><i class="fa-brands fa-github"></i> Ver GitHub</a> 
+            </nav>
+          </div>
         </div>
-        <!--Proyecto Irwin's-->
-        <h2 id="ttt">Irwin's Revenge</h2>
-            <div class="fila">
-                <div class="columna">
-                    <p>Juego de dados realizado como proyecto evaluativo de la materia Laboratorio en Computación I de la carrera 
-                        Tecnicatura Universitaria en Programacion (UTN FRGP). El juego esta hecho con C++ y sigue un reglamento 
-                        explicado al iniciar el juego.
-                    </p>
-                   <a href="https://github.com/SrJosias10/Irwin-s-Revenge" target="_blank" class="boton" title="Haga click para ver el repositorio subido a GitHub">Ver repositorio</a> 
-                </div>
-                <div class="columna">
-                    <div class="cuadrado-img aparicionImagen">
-                        <img src="carpeta/irwins.png" alt="Irwin's Revenge" title="Irwin's Revenge"/>
-                    </div>
-                </div>
-            </div>
-        <!--Proyecto Carlos Duty-->
-        <h2 id="ttt">Carlos Duty Zombies</h2>
-            <div class="fila">
-                <div class="columna">
-                    <p>Juego Shotter del estilo Top Down realizado usando Programación Orientada 
-                        a Objetos con el lenguaje C++. Se trabajo con audio e interfaz grafica por medio de la libreria SFML.
-                        Presentado como proyecto final para la materia Laboratorio en Computación II
-                    </p>
-                   <a href="https://github.com/SrJosias10/Carlos-Duty-Zombies" target="_blank" class="boton" title="Haga click para ver el repositorio subido a GitHub">Ver repositorio</a>
-                   <a href="https://www.youtube.com/watch?v=GnaV0VEkbTg&t=8s" target="_blank" class="boton" title="Haga click para ver el video subido a youtube">Ver video</a>  
-                </div>
-                <div class="columna">
-                    <div class="cuadrado-img aparicionImagen">
-                        <img src="carpeta/cod.png" alt="Carlos Duty Zombies" title="Carlos Duty Zombies"/>
-                    </div>
-                </div>
-            </div>
-        <!--Proyecto Administrador de catalogos-->
-        <h2 id="ttt">Gestor de articulos</h2>
-            <div class="fila">
-                <div class="columna">
-                    <p>Trabajo practico de consola usando .NET con el Framework ASP.NET con el lenguaje C#, es una aplicación para la gestión 
-                        de artículos de un catálogo de un comercio. Fue presentado como Trabajo Practico para la materia Programacion III
-                    </p>
-                   <a href="https://github.com/SrJosias10/TPWindowsForm" target="_blank" class="boton" title="Haga click para ver el repositorio subido a GitHub">Ver repositorio</a> 
-                </div>
-                <div class="columna">
-                    <div class="cuadrado-img aparicionImagen">
-                        <img src="carpeta/net.png" alt="Gestor de articulos" title="Gestor de articulos"/>
-                    </div>
-                </div>
-            </div>
-            <!--Proyecto Edicion de videos-->
-        <h2 id="ttt">Carrito de compras</h2>
-        <div class="fila">
-            <div class="columna">
-                <p>Usando ASP.NET con C# hice una pagina web de compras donde se manipula un carrito de compras y se interactua con 
-                    los productos.
-                </p>
-               <a href="https://github.com/juan-cruz-escalante/TP_Final" target="_blank" class="boton" title="Haga click para ver el repositorio subido a GitHub">Ver repositorio</a> 
-            </div>
-            <div class="columna">
-                <div class="cuadrado-img aparicionImagen">
-                    <img src="carpeta/carrito.png" alt="Carrito de compras" title="Carrito de compras"/>
-                </div>
-            </div>
-        </div>
+      </div>
+      
+      <div class="section" id="conocimiento1">
+        <div class="content-fit">
+          <div class="card-conocimientos">
             
-    </section><hr/><br/>
+            <h2 class="title">CONOCIMIENTOS</h2>
+      
+            <h3>Tecnicatura Universitaria en Programación</h3>
+            <p>
+              Me gradué de la Tecnicatura Universitaria en Programación en la UTN FRGP. 
+              Durante la carrera adquirí conocimientos en C++, C# y Java, además de desarrollo web con 
+              HTML, CSS, JavaScript y ASP.NET. También trabajé con SQL Server y MySQL, aplicando POO, 
+              validación de datos, manejo de excepciones y control de versiones con Git. 
+              Desarrollé habilidades en buenas prácticas, documentación y proyectos integradores.
+            </p>
+      
+            <h4>Herramientas aprendidas:</h4>
+            <div class="carousel" id="conocimiento2">
+              <img src="carpeta/c++.png" alt="C++" title="C++">
+              <img src="carpeta/csharp.png" alt="C#" title="C#">
+              <img src="carpeta/nedi.png" alt=".NET" title=".NET">
+              <img src="carpeta/java.png" alt="Java" title="Java">
+              <img src="carpeta/sql.png" alt="SQL Server" title="SQL Server">
+              <img src="carpeta/html5.png" alt="HTML5" title="HTML5">
+              <img src="carpeta/javascript.png" alt="JavaScript" title="JavaScript">
+              <img src="carpeta/css3.png" alt="CSS3" title="CSS3">
+              <img src="carpeta/mysql.png" alt="MySQL" title="MySQL">
+            </div>
+      
+            <hr/>
+      
+            <h3>Experiencia laboral</h3>
+      
+            <h4>QA – Planexware | Jun. 2024 – Jun. 2025</h4>
+            <p>
+              Diseñé y ejecuté casos de prueba funcionales y regresivos. 
+              Trabajé en Azure DevOps, participé en reuniones de producto y desarrollé automatizaciones con Cypress.
+            </p>
+            
+            <h4>Analista QA – Qualis Lab (Banco Hipotecario) | Jun. 2025 – Ago. 2025</h4>
+            <p>
+              Validé funcionalidades críticas del sistema bancario con Jira y SharePoint. 
+              Ejecuté procesos con Control-M y realicé consultas en bases de datos.
+            </p>
+      
+            <h3>Habilidades y logros:</h3>
+            <p>
+            ■ Diseño y ejecución de pruebas funcionales, regresivas y automatizadas. 
+            <br/> 
+            ■ Gestión de tareas y seguimiento de incidencias mediante Azure DevOps y Jira. 
+            <br/> 
+            ■ Documentación de evidencias y trazabilidad de pruebas con SharePoint. 
+            <br/> 
+            ■ Automatización de pruebas con Cypress y monitoreo de procesos con Control-M. 
+            <br/> 
+            ■ Capacidad de trabajo colaborativo con equipos de desarrollo y producto.
+            </p>
 
-    <!--Seccion del final-->
+            <h4>Herramientas aprendidas:</h4>
+            <div class="carousel">
+              <img src="carpeta/exp/azure.png" alt="AzureDevOps" title="AzureDevOps">
+              <img src="carpeta/exp/jira.png" alt="Jira" title="Jira">
+              <img src="carpeta/exp/teams.png" alt="Teams" title="Teams">
+              <img src="carpeta/exp/share.png" alt="Sharepoint" title="Sharepoint">
+              <img src="carpeta/exp/control.png" alt="Control-M" title="Control-M">
+              <img src="carpeta/exp/db.png" alt="DBeaver" title="DBeaver">
+              <img src="carpeta/exp/post.png" alt="Postman" title="Postman">
+            </div>
+      
+          </div>
+        </div>
+      </div>
+      
+    
+      <div class="section" id="proyectos">
+        <div class="content-fit">
+          <h2 class="title">PROYECTOS</h2>
+      
+          <div class="proyectos-grid">
+      
+            <div class="card-proyecto" id="proyectos1">
+              <h3>Home Banking</h3>
+              <p>
+                Home Banking para un banco ficticio cuya funcionalidad es crear un usuario donde el
+                administrador podrá aprobarte para pedir cuentas, préstamos y realizar transferencias.
+                Proyecto final de Laboratorio 4 con <strong>Java + MySQL</strong>.
+              </p>
+              <img src="carpeta/home.png" alt="Home Banking">
+              <a href="https://github.com/SrJosias10/Home-Banking-" target="_blank" class="boton"><i class="fa-brands fa-github"></i> Repositorio</a>
+            </div>
+      
+            <div class="card-proyecto">
+              <h3>Inmobiliaria</h3>
+              <p>
+                Página web de una inmobiliaria con sistema de favoritos y gestión de inmuebles
+                por parte del administrador. Proyecto final de Programación 3 con
+                <strong>C# .NET + SQL Server</strong>.
+              </p>
+              <img src="carpeta/inmobiliaria.png" alt="Inmobiliaria">
+              <a href="https://github.com/SrJosias10/Inmobiliaria" target="_blank" class="boton"><i class="fa-brands fa-github"></i> Repositorio</a>
+            </div>
+      
+            <div class="card-proyecto">
+              <h3 id="proyectos2">Irwin's Revenge</h3>
+              <p>
+                Juego de dados desarrollado en <strong>C++</strong> como proyecto evaluativo en
+                Laboratorio de Computación I. Aplicando principios de programación estructurada.
+              </p>
+              <img src="carpeta/irwins.png" alt="Irwin's Revenge">
+              <a href="https://github.com/SrJosias10/Irwin-s-Revenge" target="_blank" class="boton"><i class="fa-brands fa-github"></i> Repositorio</a>
+            </div>
+      
+            <div class="card-proyecto">
+              <h3>Carlos Duty Zombies</h3>
+              <p>
+                Juego shooter estilo top-down realizado en <strong>C++ con SFML</strong>.
+                Proyecto final de Laboratorio de Computación II.
+              </p>
+              <img src="carpeta/cod.png" alt="Carlos Duty Zombies">
+              <div class="acciones">
+                <a href="https://github.com/SrJosias10/Carlos-Duty-Zombies" target="_blank" class="boton"><i class="fa-brands fa-github"></i> Repositorio</a>
+                <a href="https://www.youtube.com/watch?v=GnaV0VEkbTg&t=8s" target="_blank" class="boton"><i class="fa-solid fa-video"></i> Video</a>
+              </div>
+            </div>
+      
+            <div class="card-proyecto">
+              <h3>Gestor de artículos</h3>
+              <p>
+                Aplicación de consola en <strong>C# con ASP.NET</strong> para la gestión de artículos
+                de un catálogo comercial. Proyecto de Programación 3.
+              </p>
+              <img src="carpeta/net.png" alt="Gestor de artículos">
+              <a href="https://github.com/SrJosias10/TPWindowsForm" target="_blank" class="boton"><i class="fa-brands fa-github"></i> Repositorio</a>
+            </div>
+      
+            <div class="card-proyecto">
+              <h3>Carrito de compras</h3>
+              <p>
+                Página web de compras en <strong>C# en .NET Framework</strong> con integración de
+                <strong>API de Mercado Pago</strong>. Proyecto final integrador de Programación 3.
+              </p>
+              <img src="carpeta/carrito.png" alt="Carrito de compras">
+              <a href="https://github.com/juan-cruz-escalante/TP_Final" target="_blank" class="boton"><i class="fa-brands fa-github"></i> Repositorio</a>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="section" id="contacto">
+        <div class="content-fit">
+            <div class="card-contacto">
+                <h2 class="card-title">¡Estemos en contacto!</h2>
+        
+                <form id="contactForm" action="https://formsubmit.co/41d42d34a7d702f8e5d07b133bd7bf1f" method="POST" class="form-contacto">
+        
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto" name="asunto" placeholder="Motivo de tu mensaje" required>
+                    <label for="mensaje" id="contacto1">Descripción</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    <button type="submit" class="boton"><i class="fa-solid fa-envelope"></i> Enviar mensaje</button>
+                    
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/?success=true">
+                    <input type="hidden" name="_captcha" value="false">            
+                </form>
+            </div>
+        </div>
+      </div>
+
     <section id="Final" class="final">
-        <div class="centrar">
-            <br/>
-            <a href="mailto:mromarolave@gmail.com?subject=&body=" class="boton" title="Haga click para contáctarme">¡Contáctame!</a>
-
-        </div>
-        <div class="redes">
-            <br/>
-            <a href="https://github.com/SrJosias10" target="_blank" title="GitHub"><i class="fa-brands fa-square-github"></i></a>
+        <div class="final-container">
+          <div class="redes">
+            <a href="https://github.com/SrJosias10" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.linkedin.com/in/josias-omar-olave-4b8743231/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://wa.me/5491121640928" target="_blank" title="WhatsApp"><i class="fa-brands fa-square-whatsapp"></i></a>
-            <a href="https://www.youtube.com/channel/UC__bT_eCHakEEGP2zJkubgA" target="_blank" title="Youtube"><i class="fa-brands fa-square-youtube"></i></a>
+            <a href="https://wa.me/5491121640928" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.youtube.com/channel/UC__bT_eCHakEEGP2zJkubgA" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+          <div class="final-text">
+            &copy; 2025 Josías Omar Olave. Todos los derechos reservados.
+          </div>
         </div>
-    </section><br/>
-    <div id="cursor"></div>
-
+      </section>
 </body>
 
+
+
+
+<div id="container3D"></div>
+<script type="module" src="codigo.js"></script>
 </html>
