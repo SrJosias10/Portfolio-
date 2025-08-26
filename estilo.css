@@ -452,9 +452,13 @@ h2{
   }
   
   #sobremi .content-fit,
-  #conocimiento1 .content-fit,
   #proyectos .content-fit,
   #contacto .content-fit {
+      padding-left: 0;
+      padding-right: 0;
+  }
+  #conocimiento1 .content-fit{
+      margin-top: -200px;
       padding-left: 0;
       padding-right: 0;
   }
@@ -500,7 +504,9 @@ h2{
       margin: 0 auto;
   }
   
-  .card-sobremi,
+  .card-sobremi{
+    margin-top: -120px;
+  }
   .card-conocimientos {
       padding: 20px;
       margin: 20px auto;
@@ -556,6 +562,17 @@ h2{
   }
   .final-text {
     font-size: 10px !important;
+}
+}
+
+@media (max-width: 500px) {
+  #presentacion .title{
+    font-size: 40px !important;
+}
+#presentacion .title2 {
+  font-size: px;
+  font-weight: 500;
+  gap: 1rem;
 }
 }
 

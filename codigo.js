@@ -91,7 +91,7 @@ let computadora;
 let mixer;
 
 const loader = new GLTFLoader();
-loader.load('/compu.glb',
+loader.load('carpeta/compu.glb',
     function (gltf) {
         computadora = gltf.scene;
 
