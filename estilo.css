@@ -3,7 +3,8 @@
 :root {
     /* modo claro */
     --texto-presentacion: #1a1a1a;
-    --fondo-principal: linear-gradient(#ffffff, #fafafa, #f0f0f5);
+    --fondo-principal: linear-gradient(135deg, #ffffff, #f1fdfd, #e0f7f7);
+
     --texto-principal: #000000;
     --texto-secundario: #00796b;
     --texto-linkshover: white;        
@@ -467,7 +468,7 @@ h2{
       padding-right: 0;
       min-height: auto;
   }
-  
+
   p{
     font-size: 13px !important;
   }
@@ -760,7 +761,6 @@ h2{
     font-size: 14px;
     color: var(--texto-secundario);
 }
-
 /*Mensaje mail enviado*/
 .success-message {
   display: none;
