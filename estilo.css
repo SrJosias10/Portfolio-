@@ -212,6 +212,7 @@ h2{
   color: var(--fondo-input)
 }
 
+
 @media (max-width: 1200px) {
   .menu-links {
       display: none;
@@ -424,10 +425,13 @@ h2{
     box-shadow: 0 4px 10px var(--sombra-cartas);
     align-items: center;
 }
-#proyectos .title{
+#proyectos .title {
   align-items: center;
   text-align: center;
+  -webkit-text-stroke: 1px var(--borde-cartas);
+  color: var(--texto-secundario); 
 }
+
 #proyectos a {
     max-width: 50%; 
     height: auto;
@@ -452,26 +456,22 @@ h2{
   }
   
   #sobremi .content-fit,
+  #conocimiento1 .content-fit,
   #proyectos .content-fit,
   #contacto .content-fit {
       padding-left: 0;
       padding-right: 0;
   }
-  #conocimiento1 .content-fit{
-      margin-top: -200px;
+  #sobremi .content-fit{
       padding-left: 0;
       padding-right: 0;
+      min-height: auto;
   }
   
   p{
     font-size: 13px !important;
   }
 
-  .card-contacto {
-      margin: 30px auto;
-      padding: 25px 20px;
-      width: 90%;
-  }
   
   #presentacion .title {
       margin-top: 165px;
@@ -481,6 +481,7 @@ h2{
 
   #proyectos .title{
       font-size: 40px !important;
+      -webkit-text-stroke: 0px;
   }
 
   .title{
@@ -539,7 +540,7 @@ h2{
 
 @media (max-width: 720px) {
   #presentacion .title {
-    margin-top: 140px;
+    margin-top: 180px;
     font-size: 50px !important;
     margin-bottom: 0px !important;
   }
