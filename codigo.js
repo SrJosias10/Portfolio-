@@ -54,6 +54,7 @@ botonSubir.style.display = 'none';
 
 ////////////// carrusel ///////////////////
 
+
 const carruseles = document.querySelectorAll('.carousel');
 
 carruseles.forEach(carrusel => {
