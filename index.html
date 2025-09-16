@@ -17,9 +17,9 @@
         <i class="fas fa-moon"></i>
     </button>
     
-    <a href="#opciones" class="subir-arriba" title="Subir arriba">
+    <a href="#" class="subir-arriba" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" title="Subir arriba">
       <i class="fa-solid fa-arrow-up"></i>
-    </a>
+    </a>    
 
     <section id="opciones" class="fondo-secciones">
         <nav class="navbar">
@@ -28,10 +28,10 @@
             </button>
 
             <div class="menu-links" id="menu-links">
-                <a href="#sobremi" class="linksmenu">SOBRE MI</a>       
-                <a href="#conocimiento1" class="linksmenu">CONOCIMIENTOS</a>
-                <a href="#proyectos" class="linksmenu">PROYECTOS</a>
-                <a href="#contacto" class="linksmenu">CONTACTO</a>
+              <a href="#sobremi" class="linksmenu" data-target="sobremi">SOBRE MI</a>
+              <a href="#conocimiento1" class="linksmenu" data-target="conocimiento1">CONOCIMIENTOS</a>
+              <a href="#proyectos" class="linksmenu" data-target="proyectos">PROYECTOS</a>
+              <a href="#contacto" class="linksmenu" data-target="contacto">CONTACTO</a>
             </div>
         </nav>
     </section>

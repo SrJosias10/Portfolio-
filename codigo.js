@@ -1,3 +1,19 @@
+/////////// Navegacion sin afectar URL //////////
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.linksmenu').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const id = link.dataset.target;
+        const target = document.getElementById(id);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  });
+  
+
 ////////////  Boton links   /////////////
 
 document.getElementById('menu-toggle').addEventListener('click', function() {
