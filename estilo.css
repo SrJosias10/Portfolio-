@@ -4,7 +4,6 @@
     /* modo claro */
     --texto-presentacion: #1a1a1a;
     --fondo-principal: linear-gradient(135deg, #ffffff, #f1fdfd, #e0f7f7);
-
     --texto-principal: #000000;
     --texto-secundario: #00796b;
     --texto-linkshover: white;        
@@ -15,7 +14,9 @@
     --fondo-cartas: #ffffffe1;           
     --borde-cartas: #cfd8dc;               
     --fondo-input: #f1fdfd;                
-    --sombra-cartas: rgba(0, 0, 0, 0.06);  
+    --sombra-cartas: rgba(0, 0, 0, 0.06);
+    --fondo-navbar: rgba(255, 255, 255, 0.299);  
+    --fondo-splash: #ffffff;
 }
 
 .modo-oscuro {
@@ -32,6 +33,8 @@
     --borde-cartas: #333;
     --fondo-input: #111;
     --sombra-cartas: rgba(0,0,0,0.3);
+    --fondo-navbar: rgba(0, 0, 0, 0.299);  
+    --fondo-splash: rgb(0, 39, 41);
 }
 
 body {
@@ -165,13 +168,25 @@ h2{
 }
 
 .navbar {
+  position: fixed; /* para que siempre quede visible */
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  position: relative;
   z-index: 1000;
+  padding: 15px 0;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+  background: transparent;
 }
+
+.navbar.scrolled {
+  background: var(--fondo-navbar);
+  backdrop-filter: blur(6px);
+}
+
+
 
 .menu-links {
   display: flex;
@@ -241,6 +256,11 @@ h2{
   .navbar {
       justify-content: flex-start;
       padding-left: 70px;
+  }
+  .navbar.scrolled {
+    background: none !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
   }
 }
 
@@ -785,4 +805,66 @@ h2{
 @keyframes fadeIn {
   from { opacity: 0; transform: translate(-50%, -10px); }
   to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/*Splash*/
+#splash {
+  position: fixed;
+  z-index: 9999;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: var(--fondo-splash);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  animation: fadeOutSplash 1s ease forwards;
+  animation-delay: 3s;
+}
+
+.splash-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  animation: fadeInUp 2s ease;
+}
+
+.splash-icon {
+  font-size: 2rem;
+  color: var(--texto-principal);
+  animation: bounceIn 1.5s ease;
+}
+
+.splash-text {
+  font-size: 2rem;
+  color: var(--texto-principal);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.splash-sub {
+  font-size: 1rem;
+  color: var(--texto-secundario);
+  margin-top: 10px;
+  text-align: center;
+  animation: fadeInUp 2.5s ease;
+}
+
+
+
+@keyframes bounceIn {
+  0% { transform: scale(0); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOutSplash {
+  to { opacity: 0; visibility: hidden; }
 }

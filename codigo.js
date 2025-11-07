@@ -293,4 +293,22 @@ const urlParams = new URLSearchParams(window.location.search);
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
+//////////Splash
+  window.addEventListener("load", () => {
+    const splash = document.getElementById("splash");
+    setTimeout(() => {
+      splash.style.display = "none";
+      document.body.classList.add("loaded");
+    }, 3500);
+  });
+
+  /////fondo 
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 60) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
 
