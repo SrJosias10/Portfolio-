@@ -1,279 +1,385 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="es" data-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="carpeta/icon.png" type="image/x-icon">
-    <title>Omar Olave</title>
-    <link rel="stylesheet" href="estilo.css">
+    <title>Omar Olave - Desarrollador de Software</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="estilos/general.css">
+    <link rel="stylesheet" href="estilos/inicio.css">
+    <link rel="stylesheet" href="estilos/sobremi.css">
+    <link rel="stylesheet" href="estilos/conocimientos.css">
+    <link rel="stylesheet" href="estilos/proyectos.css">
+    <link rel="stylesheet" href="estilos/contacto.css">
+    <link rel="stylesheet" href="estilos/footer.css">
 </head>
-
 <body>
-  <div id="splash">
-    <div class="splash-header">
-      <div class="splash-logo">
-      <i class="fa-solid fa-desktop splash-icon"></i>
-      </div>
-      <div class="splash-text">Bienvenidos</div>
-    </div>
-    <div class="splash-sub">Omar Olave | QA & Técnico programador</div>
-  </div>
-  
 
-
-    <button id="modo-nocturno-claro" class="modo-nocturno-claro">
-        <i class="fas fa-moon"></i>
-    </button>
-    
-    <a href="#" class="subir-arriba" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" title="Subir arriba">
+<button class="boton-menu-hamburguesa" id="botonAbrirMenu" aria-label="Menú">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+<a href="#" class="subir-arriba" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" title="Subir arriba">
       <i class="fa-solid fa-arrow-up"></i>
-    </a>    
+</a> 
 
-    <section id="opciones" class="fondo-secciones">
-        <nav class="navbar">
-            <button class="menu-toggle" id="menu-toggle">
-                <i class="fa-solid fa-bars"></i>
+<div class="contenedor-menu-flotante" id="menuFlotante">
+    <div class="panel-menu">
+        <div class="cabecera-menu">
+            <div class="perfil-menu">
+                <img src="carpeta/yo.png" alt="Omar O.">
+                <span>Omar O.</span>
+            </div>
+            <div class="selector-idioma">
+                <button class="activo" data-lang="es">ES</button>
+                <button data-lang="en">EN</button>
+            </div>
+        </div>
+
+        <ul class="lista-navegacion">
+            <li><a href="#inicio"><i class="fa-solid fa-house"></i> <span data-i18n="nav_inicio">Inicio</span></a></li>
+            <li><a href="#sobremi"><i class="fa-solid fa-user"></i> <span data-i18n="nav_sobremi">Sobre mí</span></a></li>
+            <li><a href="#conocimientos"><i class="fa-solid fa-briefcase"></i> <span data-i18n="nav_conocimientos">Conocimientos</span></a></li>
+            <li><a href="#proyectos"><i class="fa-solid fa-gear"></i> <span data-i18n="nav_proyectos">Proyectos</span></a></li>
+            <li><a href="#contacto"><i class="fa-solid fa-phone"></i> <span data-i18n="nav_contacto">Contacto</span></a></li>
+        </ul>
+
+        <div class="selector-temas-colores">
+            <div class="circulo-color seleccionado" data-tema="oscuro"></div>
+            <div class="circulo-color" data-tema="claro"></div>
+            <div class="circulo-color" data-tema="azul"></div>
+            <div class="circulo-color" data-tema="verde"></div>
+        </div>
+    </div>
+</div>
+
+<div class="success-message" id="successMessage" data-i18n="mensaje_exito">
+    <i class="fas fa-check-circle"></i> ¡El mensaje se envió con éxito!
+</div>
+
+<section id="inicio" class="seccion-inicio">
+    <div class="perfil-superior-izquierdo">
+        <img src="carpeta/yo.png" alt="Omar O.">
+        <span>Omar O.</span>
+    </div>
+
+    <div class="contenido-inicio">
+        <p class="etiqueta-portfolio" data-i18n="inicio_tag">Portfolio web</p>
+        <h1>Omar Olave</h1>
+        <h2 data-i18n="inicio_titulo">Desarrollador de Software</h2>
+    </div>
+
+    <div class="social-fab-container-izq" id="socialFabIzq">
+        <input type="checkbox" id="btn-fab-toggle-izq">
+        <label for="btn-fab-toggle-izq" class="fab-backdrop"></label>
+        <div class="fab-main-izq">
+            <label for="btn-fab-toggle-izq" class="boton-inferior-izquierdo">
+            <i class="fa-solid fa-plus"></i>
+            </label>
+        </div>
+
+        <div class="social-links-izq">
+            <a href="mailto:info@omarolave.com" class="social-btn mail" title="Correo">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://wa.me/5491121814144" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" title="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/josiasomarolave/" target="_blank" rel="noopener noreferrer" class="social-btn linkedin" title="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/SrJosias10" target="_blank" rel="noopener noreferrer" class="social-btn github" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+    </div>
+    <div class="email-inferior-derecho">info@omarolave.com</div>
+</section>
+
+<section id="sobremi" class="sobremi-section">
+    <div class="sobremi-img-container">
+        <img src="carpeta/yo.png" alt="Josías Omar Olave">
+    </div>
+    <div class="sobremi-texto">
+        <h2 data-i18n="sobremi_titulo">Sobre mí</h2>
+        <div class="linea"></div>
+        <div class="sobremi-cuerpo">
+            <p class="lead-text" data-i18n="sobremi_p1">
+                Hola, soy <strong>Josías Omar Olave</strong>, tengo 28 años y soy de Argentina. Cuento con 2 años de experiencia como analista QA y actualmente estoy trabajando como desarrollador de software.
+            </p>
+            <p data-i18n="sobremi_p2">
+                Me gradué como Técnico Universitario en Programación en la UTN FRGP y actualmente estoy cursando el último año de la Licenciatura en Tecnologías Digitales en la Universidad de la Ciudad de Buenos Aires.
+            </p>
+            <p data-i18n="sobremi_p3">
+                Me apasiona el desarrollo de software, el diseño, la automatización y todo lo relacionado con la tecnología. Soy un autodidacta nativo: esa curiosidad constante me impulsa a investigar por mi cuenta y a meterme de lleno en el mundo de la Inteligencia Artificial para aplicarla en cada proyecto.
+            </p>
+        </div>
+        <a href="#" class="btn" data-i18n="sobremi_cv">Ver Currículum vitae</a>
+    </div>
+</section>
+
+<section id="conocimientos" class="conocimientos-section">
+    <div class="conocimientos-content">
+        <h2 data-i18n="conocimientos_titulo">Conocimientos</h2>
+        <div class="linea"></div>
+        <p data-i18n="conocimientos_p">
+            Cuento con experiencia en desarrollo backend utilizando C++, C#, Java y ASP.NET, frontend con JavaScript, HTML5 y CSS3, y gestión de bases de datos relacionales en SQL Server y MySQL. En mi trayectoria laboral me he especializado en la ejecución de pruebas funcionales, de regresión y automatizadas con Cypress, gestionando incidencias y procesos a través de Azure DevOps, Jira, Control-M, SharePoint y Git.
+        </p>
+        <a href="https://github.com/SrJosias10" target="_blank" class="btn" data-i18n="conocimientos_btn_github">Ver GitHub</a>
+    </div>
+    
+    <div class="conocimientos-cards-container">
+        <div class="conocimientos-card">
+            <h3 data-i18n="card_dev_tools">Herramientas de Desarrollo</h3>
+            <div class="iconos-grid">
+                <img src="carpeta/exp/c++.png" alt="C++" class="icono">
+                <img src="carpeta/exp/csharp.png" alt="C#" class="icono">
+                <img src="carpeta/exp/java.png" alt="Java" class="icono">
+                <img src="carpeta/exp/javascript.png" alt="JavaScript" class="icono">
+                <img src="carpeta/exp/html5.png" alt="HTML5" class="icono">
+                <img src="carpeta/exp/css3.png" alt="CSS3" class="icono">
+            </div>
+        </div>
+        <div class="conocimientos-card">
+            <h3 data-i18n="card_databases">Bases de datos</h3>
+            <div class="iconos-grid">
+                <img src="carpeta/exp/mysql.png" alt="MySQL" class="icono">
+                <img src="carpeta/exp/db.png" alt="dbeaver" class="icono">
+                <img src="carpeta/exp/sql.png" alt="SQL Server" class="icono">
+            </div>
+        </div>
+        <div class="conocimientos-card">
+            <h3 data-i18n="card_tech_tools">Herramientas y Tecnologías</h3>
+            <div class="iconos-grid">
+                <img src="carpeta/exp/azure.png" alt="Azure DevOps" class="icono">
+                <img src="carpeta/exp/jira.png" alt="Jira" class="icono">
+                <img src="carpeta/exp/share.png" alt="SharePoint" class="icono">
+                <img src="carpeta/exp/control.png" alt="Control-M" class="icono">
+                <img src="carpeta/exp/cypress.png" alt="Cypress" class="icono">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="proyectos" class="proyectos-section">
+    <div class="seccion-titulo-centro">
+      <h2 data-i18n="proyectos_titulo">Proyectos</h2>
+      <div class="linea"></div>
+    </div>
+  
+    <div class="contenedor-carrusel">
+      <div class="pista-carrusel" id="pistaCarrusel">
+        <article class="tarjeta-producto">
+          <div class="contenedor-img-producto">
+            <img src="carpeta/home.png" alt="Home Banking">
+          </div>
+          <h3 data-i18n="p1_titulo">Home Banking</h3>
+          <p data-i18n="p1_desc">Home Banking para un banco ficticio cuya funcionalidad es crear un usuario donde el administrador podrá aprobarte para pedir cuentas, préstamos y realizar transferencias. Proyecto final de Laboratorio 4 con Java + MySQL.</p>
+          <a href="https://github.com/SrJosias10/Home-Banking-" class="boton-mas-info" target="_blank" data-i18n="btn_mas_info">Más información</a>
+        </article>
+
+        <article class="tarjeta-producto">
+          <div class="contenedor-img-producto">
+            <img src="carpeta/bot.png" alt="Bot">
+          </div>
+          <h3 data-i18n="p2_titulo">Bot de Atención & Soporte</h3>
+          <p data-i18n="p2_desc">Bot de atención al cliente, ventas y soporte en Node.js. Automatiza flujos de navegación, envío de archivos y derivación por mail. Ofrece atención integrada por WhatsApp y chat web (API REST), containerizado en Docker y desplegado en Azure Container Apps.</p>
+          <a href="https://api.whatsapp.com/send/?phone=5491124758250&text&type=phone_number&app_absent=0" class="boton-mas-info" target="_blank" data-i18n="btn_mas_info">Más información</a>
+        </article>
+        
+        <article class="tarjeta-producto">
+          <div class="contenedor-img-producto">
+            <img src="carpeta/diseño.png" alt="diseñoweb">
+          </div>
+          <h3 data-i18n="p3_titulo">Diseño de página web</h3>
+          <p data-i18n="p3_desc">Diseño y desarrollo de una página web responsive para una empresa de ciberseguridad hecho con HTML5, CSS3 Y JavaScript.</p>
+          <a href="https://srjosias10.github.io/modelo1/" class="boton-mas-info" target="_blank" data-i18n="btn_mas_info">Más información</a>
+        </article>
+  
+        <article class="tarjeta-producto">
+          <div class="contenedor-img-producto">
+            <img src="carpeta/cod.png" alt="CarlosDuty">
+          </div>
+          <h3 data-i18n="p4_titulo">Carlos Duty Zombies</h3>
+          <p data-i18n="p4_desc">Juego shooter estilo top-down realizado en C++ con SFML. Proyecto final de Laboratorio de Computación II.</p>
+          <a href="https://www.youtube.com/watch?v=GnaV0VEkbTg&t=8s" class="boton-mas-info" target="_blank" data-i18n="btn_mas_info">Más información</a>
+        </article>
+  
+        <article class="tarjeta-producto">
+          <div class="contenedor-img-producto">
+            <img src="carpeta/irwins.png" alt="irwinsrevenge">
+          </div>
+          <h3 data-i18n="p5_titulo">Irwin's Revenge</h3>
+          <p data-i18n="p5_desc">Juego de dados desarrollado en C++ como proyecto evaluativo en Laboratorio de Computación I. Aplicando principios de programación estructurada.</p>
+          <a href="https://github.com/SrJosias10/Irwin-s-Revenge" class="boton-mas-info" target="_blank" data-i18n="btn_mas_info">Más información</a>
+        </article>
+
+        <article class="tarjeta-producto">
+          <div class="contenedor-img-producto">
+            <img src="carpeta/carrito.png" alt="Carrito de compras">
+          </div>
+          <h3 data-i18n="p6_titulo">Carrito de compras</h3>
+          <p data-i18n="p6_desc">Página web de compras en C# en .NET Framework con integración de API de Mercado Pago. Proyecto final integrador de Programación 3.</p>
+          <a href="https://github.com/juan-cruz-escalante/TP_Final" class="boton-mas-info" target="_blank" data-i18n="btn_mas_info">Más información</a>
+        </article>
+
+        <article class="tarjeta-producto">
+          <div class="contenedor-img-producto">
+            <img src="carpeta/inmobiliaria.png" alt="Inmobiliaria">
+          </div>
+          <h3 data-i18n="p7_titulo">Inmobiliaria</h3>
+          <p data-i18n="p7_desc">Página web de una inmobiliaria con sistema de favoritos y gestión de inmuebles por parte del administrador. Proyecto final de Programación 3 con C# .NET + SQL Server.</p>
+          <a href="https://github.com/SrJosias10/Inmobiliaria" class="boton-mas-info" target="_blank" data-i18n="btn_mas_info">Más información</a>
+        </article>
+      </div>
+    </div>
+    <div class="controles-carrusel">
+      <button class="boton-flecha" id="btnPrev" aria-label="Anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div class="indicadores-puntos" id="indicadoresPuntos"></div>
+      <button class="boton-flecha" id="btnNext" aria-label="Siguiente">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+</section>
+
+<section id="contacto" class="contacto-section">
+    <div class="seccion-titulo-centro">
+      <h2 data-i18n="contacto_titulo">Contacto</h2>
+      <div class="linea"></div>
+    </div>
+  
+    <div class="contacto-contenedor">
+      <div class="contacto-info">
+        
+        <a href="mailto:info@omarolave.com" class="info-card">
+          <div class="info-icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </div>
+          <div class="info-texto">
+            <h4 data-i18n="info_mail">MAIL</h4>
+            <p>info@omarolave.com</p>
+          </div>
+        </a>
+  
+        <a href="tel:+5491121814144" class="info-card">
+          <div class="info-icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          </div>
+          <div class="info-texto">
+            <h4 data-i18n="info_tel">TELÉFONO</h4>
+            <p>+54 9 1121814144</p>
+          </div>
+        </a>
+  
+        <a href="https://github.com/SrJosias10" target="_blank" class="info-card">
+          <div class="info-icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </div>
+          <div class="info-texto">
+            <h4>GITHUB</h4>
+            <p>github.com/SrJosias10</p>
+          </div>
+        </a>
+  
+        <a href="https://www.linkedin.com/in/josiasomarolave/" target="_blank" class="info-card">
+          <div class="info-icono">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </div>
+          <div class="info-texto">
+            <h4>LINKEDIN</h4>
+            <p>linkedin.com/in/josiasomarolave</p>
+          </div>
+        </a>
+        <div class="mapa-contenedor">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105073.44367005232!2d-58.5033383!3d-34.6156624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses-419!2sar!4v1715000000000!5m2!1ses-419!2sar" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="contacto-formulario">
+        <form class="form-panel" id="contactForm" action="https://formsubmit.co/41d42d34a7d702f8e5d07b133bd7bf1f" method="POST">
+            <h3 data-i18n="form_hablemos">Hablemos</h3>
+            
+            <div class="input-group">
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" data-i18n-ph="ph_nombre" required>
+            </div>
+            
+            <div class="input-group">
+                <input type="email" id="email" name="email" placeholder="Correo electrónico" data-i18n-ph="ph_email" required>
+            </div>
+            
+            <div class="input-group grupo-textarea">
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí.." data-i18n-ph="ph_mensaje" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn" data-i18n="form_btn">
+                <i class="fa-solid fa-envelope"></i> Enviar mensaje
             </button>
 
-            <div class="menu-links" id="menu-links">
-              <a href="#sobremi" class="linksmenu" data-target="sobremi">SOBRE MI</a>
-              <a href="#conocimiento1" class="linksmenu" data-target="conocimiento1">CONOCIMIENTOS</a>
-              <a href="#proyectos" class="linksmenu" data-target="proyectos">PROYECTOS</a>
-              <a href="#contacto" class="linksmenu" data-target="contacto">CONTACTO</a>
-            </div>
-        </nav>
-    </section>
-    <div class="success-message" id="successMessage">
-      <i class="fas fa-check-circle"></i> ¡El mensaje se envió con éxito!
+            <input type="hidden" name="_next" value="https://omarolave.com/?success=true">
+            <input type="hidden" name="_captcha" value="false">
+        </form>
     </div>
-
-    <div class="section" id="presentacion">
-        <div class="content-fit">
-            <div class="title">Hola, soy Omar</div>
-            <div class="title2">QA & Técnico programador</div>
-        </div>
     </div>
-    <div class="section" id="sobremi">
-        <div class="content-fit">
-          <div class="card-sobremi">
-            <div class="sobre-mi-header">
-              <img src="carpeta/inicio3.png" alt="Josias Omar" class="profile-image">
-              <div class="sobre-mi-info">
-                <h2 class="title">SOBRE MÍ</h2>
-                <p>
-                  Me llamo Josías Omar Olave y tengo 27 años. Soy QA y Técnico Universitario en 
-                  Programación graduado en la UTN. Actualmente estudio la Licenciatura en Ciencias de Datos en 
-                  la Universidad de la Ciudad de Buenos Aires.  
-                  Además, me considero autodidacta en programación y testing.  
-                  Me caracterizo por ser una persona responsable y comprometida con mis tareas y metas.
-                </p>
-              </div>
-            </div>
-            <nav class="centrar" id="sobremi2">
-              <a href="carpeta/Olave.pdf" class="boton" target="_blank" title="Ver mi CV"><i class="fa-solid fa-file"></i> Ver CV</a>
-              <a href="https://github.com/SrJosias10" class="boton" target="_blank" title="Ver mi GitHub"><i class="fa-brands fa-github"></i> Ver GitHub</a> 
-            </nav>
-          </div>
-        </div>
-      </div>
-      
-      <div class="section" id="conocimiento1">
-        <div class="content-fit">
-          <div class="card-conocimientos">
-            <h2 class="title">CONOCIMIENTOS</h2>
-            <h3>Tecnicatura Universitaria en Programación</h3>
-            <br/>
-            <p>
-              Me gradué de la Tecnicatura Universitaria en Programación en la UTN FRGP. 
-              Durante la carrera adquirí conocimientos en C++, C# y Java, además de desarrollo web con 
-              HTML, CSS, JavaScript y ASP.NET. También trabajé con SQL Server y MySQL, aplicando POO, 
-              validación de datos, manejo de excepciones y control de versiones con Git. 
-              Desarrollé habilidades en buenas prácticas, documentación y proyectos integradores.
-            </p>
-      
-            <h4>Herramientas aprendidas:</h4>
-            <div class="carousel" id="conocimiento2">
-              <img src="carpeta/c++.png" alt="C++" title="C++">
-              <img src="carpeta/csharp.png" alt="C#" title="C#">
-              <img src="carpeta/nedi.png" alt=".NET" title=".NET">
-              <img src="carpeta/java.png" alt="Java" title="Java">
-              <img src="carpeta/sql.png" alt="SQL Server" title="SQL Server">
-              <img src="carpeta/html5.png" alt="HTML5" title="HTML5">
-              <img src="carpeta/javascript.png" alt="JavaScript" title="JavaScript">
-              <img src="carpeta/css3.png" alt="CSS3" title="CSS3">
-              <img src="carpeta/mysql.png" alt="MySQL" title="MySQL">
-            </div>
-      
-            <hr/>
-      
-            <h3>Experiencia laboral</h3>
-            <h4>Analista QA – Novasys S.R.L. | Oct. 2025 – Actualmente</h4>
-            <p>
-              Me desempeño en el área de QA. Mis tareas principales incluyen la ejecución de pruebas funcionales, detección y documentación de errores, y la automatización de casos de prueba para optimizar los procesos de validación del software.
-            </p>
-          
-            <h4>Analista QA – Qualis Lab (Banco Hipotecario) | Jun. 2025 – Ago. 2025</h4>
-            <p>
-              Validé funcionalidades críticas del sistema bancario con Jira y SharePoint. 
-              Ejecuté procesos con Control-M y realicé consultas en bases de datos.
-            </p>
-            
-            <h4>QA – Planexware | Jun. 2024 – Jun. 2025</h4>
-            <p>
-              Diseñé y ejecuté casos de prueba funcionales y regresivos. 
-              Trabajé en Azure DevOps, participé en reuniones de producto y desarrollé automatizaciones con Cypress.
-            </p>
-      
-            <h3>Habilidades y logros:</h3>
-            <p>
-            ■ Diseño y ejecución de pruebas funcionales, regresivas y automatizadas. 
-            <br/> 
-            ■ Gestión de tareas y seguimiento de incidencias mediante Azure DevOps y Jira. 
-            <br/> 
-            ■ Documentación de evidencias y trazabilidad de pruebas con SharePoint. 
-            <br/> 
-            ■ Automatización de pruebas con Cypress y monitoreo de procesos con Control-M. 
-            <br/> 
-            ■ Capacidad de trabajo colaborativo con equipos de desarrollo y producto.
-            </p>
+</section>
 
-            <h4>Herramientas aprendidas:</h4>
-            <div class="carousel">
-              <img src="carpeta/exp/azure.png" alt="AzureDevOps" title="AzureDevOps">
-              <img src="carpeta/exp/jira.png" alt="Jira" title="Jira">
-              <img src="carpeta/exp/teams.png" alt="Teams" title="Teams">
-              <img src="carpeta/exp/share.png" alt="Sharepoint" title="Sharepoint">
-              <img src="carpeta/exp/control.png" alt="Control-M" title="Control-M">
-              <img src="carpeta/exp/db.png" alt="DBeaver" title="DBeaver">
-              <img src="carpeta/exp/post.png" alt="Postman" title="Postman">
-            </div>
-      
-          </div>
-        </div>
+<footer class="sitio-footer">
+    <div class="contenedor-footer">
+      <div class="columna-footer marca">
+        <img id="logo-footer" src="./carpeta/firma.png" alt="firma" class="logo-footer">
+        <p class="descripcion-empresa" data-i18n="footer_desc">
+            Especializado en el desarrollo de software y el testing. Comprometido con la estructura, las pruebas y la solidez de cada sistema.
+        </p>
       </div>
-      
-    
-      <div class="section" id="proyectos">
-        <div class="content-fit">
-          <h2 class="title">PROYECTOS</h2>
-      
-          <div class="proyectos-grid">
-      
-            <div class="card-proyecto" id="proyectos1">
-              <h3>Home Banking</h3>
-              <p>
-                Home Banking para un banco ficticio cuya funcionalidad es crear un usuario donde el
-                administrador podrá aprobarte para pedir cuentas, préstamos y realizar transferencias.
-                Proyecto final de Laboratorio 4 con <strong>Java + MySQL</strong>.
-              </p>
-              <img src="carpeta/home.png" alt="Home Banking">
-              <a href="https://github.com/SrJosias10/Home-Banking-" target="_blank" class="boton"><i class="fa-brands fa-github"></i> Repositorio</a>
-            </div>
-      
-            <div class="card-proyecto">
-              <h3>Inmobiliaria</h3>
-              <p>
-                Página web de una inmobiliaria con sistema de favoritos y gestión de inmuebles
-                por parte del administrador. Proyecto final de Programación 3 con
-                <strong>C# .NET + SQL Server</strong>.
-              </p>
-              <img src="carpeta/inmobiliaria.png" alt="Inmobiliaria">
-              <a href="https://github.com/SrJosias10/Inmobiliaria" target="_blank" class="boton"><i class="fa-brands fa-github"></i> Repositorio</a>
-            </div>
-      
-            <div class="card-proyecto">
-              <h3 id="proyectos2">Irwin's Revenge</h3>
-              <p>
-                Juego de dados desarrollado en <strong>C++</strong> como proyecto evaluativo en
-                Laboratorio de Computación I. Aplicando principios de programación estructurada.
-              </p>
-              <img src="carpeta/irwins.png" alt="Irwin's Revenge">
-              <a href="https://github.com/SrJosias10/Irwin-s-Revenge" target="_blank" class="boton"><i class="fa-brands fa-github"></i> Repositorio</a>
-            </div>
-      
-            <div class="card-proyecto">
-              <h3>Carlos Duty Zombies</h3>
-              <p>
-                Juego shooter estilo top-down realizado en <strong>C++ con SFML</strong>.
-                Proyecto final de Laboratorio de Computación II.
-              </p>
-              <img src="carpeta/cod.png" alt="Carlos Duty Zombies">
-              <div class="acciones">
-                <a href="https://github.com/SrJosias10/Carlos-Duty-Zombies" target="_blank" class="boton"><i class="fa-brands fa-github"></i> Repositorio</a>
-                <a href="https://www.youtube.com/watch?v=GnaV0VEkbTg&t=8s" target="_blank" class="boton"><i class="fa-solid fa-video"></i> Video</a>
-              </div>
-            </div>
-      
-            <div class="card-proyecto">
-              <h3>Gestor de artículos</h3>
-              <p>
-                Aplicación de consola en <strong>C# con ASP.NET</strong> para la gestión de artículos
-                de un catálogo comercial. Proyecto de Programación 3.
-              </p>
-              <img src="carpeta/net.png" alt="Gestor de artículos">
-              <a href="https://github.com/SrJosias10/TPWindowsForm" target="_blank" class="boton"><i class="fa-brands fa-github"></i> Repositorio</a>
-            </div>
-      
-            <div class="card-proyecto">
-              <h3>Carrito de compras</h3>
-              <p>
-                Página web de compras en <strong>C# en .NET Framework</strong> con integración de
-                <strong>API de Mercado Pago</strong>. Proyecto final integrador de Programación 3.
-              </p>
-              <img src="carpeta/carrito.png" alt="Carrito de compras">
-              <a href="https://github.com/juan-cruz-escalante/TP_Final" target="_blank" class="boton"><i class="fa-brands fa-github"></i> Repositorio</a>
-            </div>
-      
-          </div>
-        </div>
+      <div class="columna-footer">
+        <h4 class="titulo-columna" data-i18n="footer_menu">Menú</h4>
+        <ul class="lista-links">
+          <li><a href="#sobremi" data-i18n="nav_sobremi">Sobre mí</a></li>
+          <li><a href="#conocimientos" data-i18n="nav_conocimientos">Conocimientos</a></li>
+          <li><a href="#proyectos" data-i18n="nav_proyectos">Proyectos</a></li>
+          <li><a href="#contacto" data-i18n="nav_contacto">Contacto</a></li>
+        </ul>
       </div>
-      
+  
+      <div class="columna-footer">
+        <h4 class="titulo-columna" data-i18n="footer_contacto">Contacto</h4>
+        <ul class="lista-contacto">
+          <li>
+            <a href="mailto:info@omarolave.com">
+              <i class="fa-solid fa-square-envelope icono-contacto"></i>info@omarolave.com.ar
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/5491121814144" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-square-whatsapp icono-contacto"></i>+54 9 11 2181 4144
+            </a>
+          </li>
+          <li>
+            <div class="item-ubicacion" data-i18n="footer_ubicacion">
+              <i class="fa-solid fa-location-dot icono-contacto"></i>Buenos Aires, Argentina
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="base-footer">
+      <div class="contenedor-base">
+        <p data-i18n="footer_rights">© 2026 Josías Omar Olave. Todos los derechos reservados.</p>
+      </div>
+    </div>
+</footer>
 
-      <div class="section" id="contacto">
-        <div class="content-fit">
-            <div class="card-contacto">
-                <h2 class="card-title">Contáctame</h2>
-        
-                <form id="contactForm" action="https://formsubmit.co/41d42d34a7d702f8e5d07b133bd7bf1f" method="POST" class="form-contacto">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
-                    <label for="asunto">Asunto</label>
-                    <input type="text" id="asunto" name="asunto" placeholder="Motivo de tu mensaje" required>
-                    <label for="mensaje" id="contacto1">Descripción</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
-                    <button type="submit" class="boton"><i class="fa-solid fa-envelope"></i> Enviar mensaje</button>
-                    
-                    <input type="hidden" name="_next" value="https://omarolave.com/?success=true">
-                    <input type="hidden" name="_captcha" value="false">            
-                </form>
-            </div>
-        </div>
-      </div>
-
-    <section id="Final" class="final">
-        <div class="final-container">
-          <div class="redes">
-            <a href="https://github.com/SrJosias10" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/josias-omar-olave-4b8743231/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://wa.me/5491121640928" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://www.youtube.com/channel/UC__bT_eCHakEEGP2zJkubgA" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          </div>
-          <div class="final-text">
-            &copy; 2025 Josías Omar Olave. Todos los derechos reservados.
-          </div>
-        </div>
-      </section>
+<script src="codigo.js"></script>
 </body>
-
-
-
-
-<div id="container3D"></div>
-<script type="module" src="codigo.js"></script>
 </html>

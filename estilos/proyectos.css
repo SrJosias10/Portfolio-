@@ -1,0 +1,181 @@
+.proyectos-section {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #proyectos .seccion-titulo-centro {
+    margin: 0 auto 1px auto;
+  }
+  
+  .contenedor-carrusel {
+    width: 100%;
+    overflow: hidden;
+    padding: 2rem 0;
+    user-select: none;
+    box-sizing: border-box;
+  }
+  
+  .pista-carrusel {
+    display: flex;
+    gap: 24px;
+    will-change: transform;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .pista-carrusel.con-transicion {
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  
+  .tarjeta-producto {
+    flex: 0 0 calc((100% - 48px) / 3);
+    width: calc((100% - 48px) / 3);
+    box-sizing: border-box;
+    height: 460px;
+    background: var(--color-fondo-base);
+    box-shadow: 0px 5px 12px 5px var(--sombra);
+    border-radius: 20px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    opacity: 0.35;
+    transform: scale(0.92);
+    filter: blur(2px);
+    transition: opacity 0.4s ease, transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .tarjeta-producto.activa {
+    opacity: 1;
+    transform: scale(1.05);
+    filter: blur(0px);
+    box-shadow: 0px 5px 12px 5px var(--sombra);
+  }
+  
+  .contenedor-img-producto {
+    width: 100%;
+    height: 170px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--color-fondo-base);
+    margin-bottom: 1.2rem;
+    flex-shrink: 0;
+  }
+  
+  .contenedor-img-producto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .tarjeta-producto h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--color-texto);
+    margin-bottom: 0.8rem;
+  }
+  
+  .tarjeta-producto p {
+    font-size: 0.85rem;
+    color: var(--color-texto-secundario);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    flex-grow: 1; 
+  }
+  
+  .boton-mas-info {
+    display: inline-block;
+    border: 1px solid var(--color-texto);
+    color: var(--color-texto);
+    background-color: transparent;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    margin-top: auto;
+  }
+  
+  .boton-mas-info:hover {
+    background-color: var(--color-texto);
+    color: var(--color-fondo-base);
+  }
+  
+  .controles-carrusel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 30px;
+  }
+  
+  .boton-flecha {
+    background: transparent;
+    border: none;
+    color: var(--color-texto);
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  
+  .boton-flecha:hover {
+    transform: scale(1.25);
+    opacity: 0.8;
+  }
+  
+  .indicadores-puntos {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+  }
+  
+  .punto {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1.5px solid var(--color-texto);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  
+  .punto.activo {
+    background: var(--color-texto);
+    transform: scale(1.2);
+  }
+  
+  @media (max-width: 900px) {
+    .proyectos-section {
+      padding: 60px 20px;
+      overflow: hidden;
+    }
+  
+    .pista-carrusel {
+      width: max-content;
+      gap: 16px;
+    }
+  
+    .tarjeta-producto {
+      flex: 0 0 300px;
+      width: 300px;
+      height: 440px;
+      transform: scale(0.9);
+    }
+  
+    .tarjeta-producto.activa {
+      transform: scale(1);
+    }
+  }

@@ -1,0 +1,128 @@
+.seccion-inicio {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../carpeta/fondo-inicio.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 70px;
+  padding-bottom: 110px;
+}
+
+.seccion-inicio::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--color-degradado-arriba) 0%, var(--color-degradado-medio) 50%, var(--color-degradado-abajo) 100% );
+  opacity: 0.85;
+  z-index: 1;
+}
+
+.perfil-superior-izquierdo {
+  position: absolute;
+  top: 32px;
+  left: 55px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.perfil-superior-izquierdo img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.perfil-superior-izquierdo span {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-encabezado);
+}
+
+.contenido-inicio {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.etiqueta-portfolio {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  opacity: 0.75;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: var(--color-texto);
+}
+
+.contenido-inicio h1 {
+  font-size: 5.2rem;
+  font-weight: 600;
+  line-height: 1.05;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+  background: var(--color-titulo);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contenido-inicio h2 {
+  font-size: 1.55rem;
+  color: var(--color-acento);
+  font-weight: 400;
+  letter-spacing: -0.2px;
+}
+
+.email-inferior-derecho {
+  position: absolute;
+  bottom: 40px;
+  right: 55px;
+  z-index: 2;
+  font-size: 15px;
+  color: var(--color-texto);
+  opacity: 0.9;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 768px) {
+    
+  .seccion-inicio {
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contenido-inicio {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .contenido-inicio h1 {
+    font-size: 3.2rem; 
+  }
+
+  .contenido-inicio h2 {
+    font-size: 1.25rem;
+  }
+
+  .perfil-superior-izquierdo {
+    top: 20px;
+    left: 20px;
+  }
+
+
+  .email-inferior-derecho {
+    bottom: 20px;
+    right: 20px;
+    font-size: 0.8rem;
+  }
+}

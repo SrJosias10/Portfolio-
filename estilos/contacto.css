@@ -1,0 +1,207 @@
+.contacto-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 80px 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .contacto-section .linea{
+        margin: 0 auto;
+        display: flex;
+  }
+  
+  .contacto-contenedor {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    align-items: stretch; 
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 20px;
+  }
+  .contacto-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 450px;
+  }
+  
+  .info-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--color-fondo-base);
+    padding: 20px 25px;
+    border-radius: 16px;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    box-shadow: 0 10px 40px var(--sombra);
+  }
+  
+  
+  .info-icono {
+    width: 45px;
+    height: 45px;
+    background-color: var(--color-acento);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .info-icono svg {
+    width: 20px;
+    height: 20px;
+    color: var(--color-icono);
+  }
+  
+  .info-texto h4 {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-texto);
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+  }
+  
+  .info-texto p {
+    font-size: 0.9rem;
+    color: var(--color-texto-secundario);
+    margin: 0;
+    word-break: break-all;
+  }
+  
+  .mapa-contenedor {
+    position: relative; 
+    width: 100%;
+    flex-grow: 1; 
+    min-height: 150px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  
+  .mapa-contenedor iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+  }
+  
+  .contacto-formulario {
+    flex: 1.2;
+    display: flex;
+  }
+  
+  .form-panel {
+    width: 100%;
+    background-color: var(--color-fondo-base);
+    padding: 50px;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px var(--sombra);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-panel h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-texto);
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    background-color: var(--color-fondo-base);
+    box-shadow: 0 0 20px 0px var(--sombra);
+    border:none;
+    color: var(--color-texto);
+    padding: 16px 20px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: var(--transition-smooth);
+  }
+  
+  .grupo-textarea {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .grupo-textarea textarea {
+    width: 100%;
+    flex-grow: 1; 
+    background-color: var(--color-fondo-base);
+    box-shadow: 0 0 20px 0px var(--sombra);
+    border:none;
+    color: var(--color-texto);
+    padding: 16px 20px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    box-sizing: border-box;
+    transition: var(--transition-smooth);
+    resize: none; 
+  }
+  
+  .input-group input::placeholder,
+  .grupo-textarea textarea::placeholder {
+    color: var(--color-texto-secundario);
+  }
+  
+  .input-group input:focus,
+  .grupo-textarea textarea:focus {
+    outline: none;
+    border-color: var(--color-acento);
+    box-shadow: 0 0 0 2px var(--color-acento-sombra);
+  }
+  
+  #contacto .btn {
+    border: var(--color-texto);
+    background-color: var(--color-texto);
+    color: var(--color-fondo-base);
+  }
+  
+  #contacto .btn:hover {
+    background-color: var(--color-acento);
+    color: var(--color-texto);
+  }
+
+  
+  @media (max-width: 900px) {
+    .contacto-section {
+      padding: 60px 20px;
+    }
+    
+    .contacto-contenedor {
+      flex-direction: column;
+      gap: 50px;
+    }
+  
+    .contacto-info {
+      max-width: 100%;
+    }
+  
+    .mapa-contenedor {
+      min-height: 250px; 
+    }
+  
+    .grupo-textarea textarea {
+      min-height: 150px; 
+    }
+  
+    .form-panel {
+      padding: 30px 20px;
+    }
+  }
