@@ -38,7 +38,8 @@
     flex: 0 0 calc((100% - 48px) / 3);
     width: calc((100% - 48px) / 3);
     box-sizing: border-box;
-    height: 460px;
+    height: auto;
+    min-height: 460px;
     background: var(--color-fondo-base);
     box-shadow: 0px 5px 12px 5px var(--sombra);
     border-radius: 20px;
@@ -169,10 +170,11 @@
     }
   
     .tarjeta-producto {
-      flex: 0 0 300px;
-      width: 300px;
-      height: 440px;
-      transform: scale(0.9);
+      flex: 0 0 85vw;
+      width: 85vw;
+      max-width: 350px;
+      height: auto;
+      min-height: 460px;
     }
   
     .tarjeta-producto.activa {
