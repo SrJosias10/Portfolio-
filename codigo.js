@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.documentElement.style.setProperty('--color-titulo', 'linear-gradient(90deg, #0e1110 0%, rgb(31, 32, 32) 100%)');
             document.documentElement.style.setProperty('--color-texto', '#131d17');
             document.documentElement.style.setProperty('--color-texto-secundario', 'rgba(28, 42, 34, 0.68)');
-            document.documentElement.style.setProperty('--color-panel-fondo', '#0a9758');
+            document.documentElement.style.setProperty('--color-panel-fondo', '#389169');
             document.documentElement.style.setProperty('--color-panel-texto', '#1c2a22');
             document.documentElement.style.setProperty('--color-borde-seleccion', '#b8912a');
             document.documentElement.style.setProperty('--transition-smooth', 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)');
@@ -372,7 +372,7 @@ document.addEventListener("DOMContentLoaded", () => {
             sobremi_p3: "Me apasiona el desarrollo de software, el diseño, la automatización y todo lo relacionado con la tecnología. Soy un autodidacta nativo: esa curiosidad constante me impulsa a investigar por mi cuenta y a meterme de lleno en el mundo de la Inteligencia Artificial para aplicarla en cada proyecto.",
             sobremi_cv: "Ver Currículum vitae",
             conocimientos_titulo: "Conocimientos",
-            conocimientos_p: "Cuento con experiencia en desarrollo backend utilizando C++, C#, Java y ASP.NET, frontend con JavaScript, HTML5 y CSS3, y gestión de bases de datos relacionales en SQL Server y MySQL. En mi trayectoria laboral me he especializado en la ejecución de pruebas funcionales, de regresión y automatizadas con Cypress, gestionando incidencias y procesos a través de Azure DevOps, Jira, Control-M, SharePoint y Git.",
+            conocimientos_p: "Desarrollo soluciones de software (sitios web, bots y automatizaciones) y aseguro la calidad del sistema mediante pruebas funcionales, de regresión y automatizadas. Tengo experiencia en desarrollo backend (C/C++, C#, Java), frontend (JavaScript, HTML5, CSS3) y bases de datos (SQL Server, MySQL). Automatizo pruebas e integración de datos con Cypress y Node.js, y gestiono incidencias y flujos de trabajo en Azure DevOps, Jira, Control-M y Postman.",
             conocimientos_btn_github: "Ver GitHub",
             card_dev_tools: "Herramientas de Desarrollo",
             card_databases: "Bases de datos",
@@ -422,7 +422,7 @@ document.addEventListener("DOMContentLoaded", () => {
             sobremi_p3: "I'm passionate about software development, design, automation, and everything technology-related. I am a native self-taught learner: that constant curiosity drives me to research on my own and dive deep into Artificial Intelligence to apply it to every project.",
             sobremi_cv: "View Resume",
             conocimientos_titulo: "Skills",
-            conocimientos_p: "I have experience in backend development using C++, C#, Java, and ASP.NET, frontend with JavaScript, HTML5, and CSS3, and relational database management in SQL Server and MySQL. Throughout my career, I have specialized in functional, regression, and automated testing with Cypress, managing issues and workflows through Azure DevOps, Jira, Control-M, SharePoint, and Git.",
+            conocimientos_p: "I build end-to-end software solutions (web applications, bots, and automation tools) and ensure software quality through functional, regression, and automated testing. I have experience in backend development (C/C++, C#, Java), frontend (JavaScript, HTML5, CSS3), and databases (SQL Server, MySQL). I automate testing and data processing using Cypress and Node.js, managing workflows and issue tracking via Azure DevOps, Jira, Control-M, and Postman.",
             conocimientos_btn_github: "View GitHub",
             card_dev_tools: "Development Tools",
             card_databases: "Databases",
